@@ -1,11 +1,11 @@
-﻿body.sakura {background-color: #FEEEED}
-table.zhengshuzuo {background-color: #FCF5F7}
+﻿body.sakura {background-color: #FEEEED}/*桜色*/
+table.zhengshuzuo {background-color: #FCF5F7}/*薄桜（うすざくら）*/
 td.sc{background-color: #7BAA17}/*青柳（あおやぎ）色 */ /* 1 Coin Clear */ /* Single Coin */
 td.nm{background-color: #7EC7D8}/*水縹（みはなだ） */ /* No Miss */
-td.nb{background-color: #EA0032}/*韓紅（からくれない）*/ /* No Bomb */
+td.nb{background-color: #EA0032; color: #FFFFFF}/*韓紅（からくれない）*/ /* No Bomb */
 td.nr{background-color: #FEF263}/*黄蘗（きはだ）*/ /* No Release or No Border Breaks */
-td.nmnb{background-color:purple}
-.VioletDetector {color: #990066}
-table.VioletDetector {background-color: #990066; color:#FFFFFF}
+td.nmnb{background-color: #7065A3}/*菫色（すみれいろ）*/
+.VioletDetector {color: #7065A3}/*菫色（すみれいろ）*/
+table.VioletDetector {background-color: #772F6D; color:#FFFFFF}/*京紫（きょうむらさき），白*/
 
 
