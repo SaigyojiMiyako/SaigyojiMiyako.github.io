@@ -5,7 +5,7 @@ td.nm{background-color: #7EC7D8}/*水縹（みはなだ） */ /* No Miss */
 td.nb{background-color: #EA0032}/*韓紅（からくれない）*/ /* No Bomb */
 td.nr{background-color: #FEF263}/*黄蘗（きはだ）*/ /* No Release or No Border Breaks */
 td.nmnb{background-color:purple}
-table.VioletDetector {background-color: #990066}
-h2.VioletDetector {color: #990066}
-h3.VioletDetector {color: #990066}
+.VioletDetector {color: #990066}
+table.VioletDetector {background-color: #990066; color:#FFFFFF}
+
 
