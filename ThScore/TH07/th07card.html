@@ -1,1859 +1,1860 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 
  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>東方妖々夢スコアデータ</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="th07.css" />
-<style type="text/css">
-<!--
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>東方妖々夢 スコアデータ</title>
+  <link rel="stylesheet" href="style.css" />
+<style>
+/* <![CDATA[ */
+    td.character { min-width: 100px; }
+    td.level { min-width: 70px; }
+    td.stage { min-width: 70px; }
     table.rate_per_card td.number { min-width: 40px; }
     table.rate_per_card td.card { min-width: 180px; }
     table.rate_per_card td.rate { min-width: 80px; }
     table.rate_per_level td.rate { min-width: 100px; }
     table.rate_per_stage td.rate { min-width: 100px; }
--->
+/* ]]> */
 </style>
  </head>
 
  <body>
 
-  <h1>東方妖々夢スコアデータ</h1>
+  <header>
+   <h1>東方妖々夢 スコアデータ</h1>
+   <hr />
+   <nav>
+    <ul>
+     <li><a href="th07score1.html">スコアデータ全般</a></li>
+     <li><a href="th07score2.html">個別ランキング</a></li>
+     <li><a href="th07score3.html">プラクティス</a></li>
+     <li>御札戦歴</li>
+    </ul>
+    <ul>
+     <li><a href="#rate_per_card">スペルカード別</a></li>
+     <li><a href="#rate_per_level">難易度別</a></li>
+     <li><a href="#rate_per_stage">ステージ別</a></li>
+    </ul>
+   </nav>
+  </header>
 
-  <hr />
+  <main>
 
-  <div class="section">
+   <section>
+    <h2 id="Card">御札戦歴</h2>
+
+    <table class="rate_per_card">
+     <caption id="rate_per_card">スペルカード別取得率 （上段： MaxBonus、下段： 取得回数 / 遭遇回数）</caption>
+     <thead>
+      <tr>
+       <th class="number">No.</th>
+       <th class="card">スペルカード名<br />（難易度）</th>
+       <th class="character">全主人公合計</th>
+       <th class="character">博麗 霊夢（霊）</th>
+       <th class="character">博麗 霊夢（夢）</th>
+       <th class="character">霧雨 魔理沙（魔）</th>
+       <th class="character">霧雨 魔理沙（恋）</th>
+       <th class="character">十六夜 咲夜（幻）</th>
+       <th class="character">十六夜 咲夜（時）</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="number">No.01</td>
+       <td class="card">霜符「フロストコラムス」<br />(Hard)</td>
+       <td class="rate">1,417,240<br />16 / 17</td>
+       <td class="rate">1,302,370<br />4 / 4</td>
+       <td class="rate">1,182,340<br />5 / 6</td>
+       <td class="rate">1,203,780<br />1 / 1</td>
+       <td class="rate">1,202,220<br />1 / 1</td>
+       <td class="rate">1,417,240<br />3 / 3</td>
+       <td class="rate">1,414,650<br />2 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.02</td>
+       <td class="card">霜符「フロストコラムス -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">1,442,280<br />21 / 26</td>
+       <td class="rate">1,442,280<br />3 / 5</td>
+       <td class="rate">1,263,520<br />7 / 8</td>
+       <td class="rate">1,421,090<br />1 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">1,283,990<br />6 / 8</td>
+       <td class="rate">1,291,850<br />4 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.03</td>
+       <td class="card">寒符「リンガリングコールド -Easy-」<br />(Easy)</td>
+       <td class="rate">1,562,070<br />19 / 21</td>
+       <td class="rate">1,420,580<br />1 / 1</td>
+       <td class="rate">1,441,430<br />9 / 9</td>
+       <td class="rate">1,562,070<br />2 / 3</td>
+       <td class="rate">1,416,850<br />4 / 5</td>
+       <td class="rate">1,515,660<br />2 / 2</td>
+       <td class="rate">1,390,350<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.04</td>
+       <td class="card">寒符「リンガリングコールド」<br />(Normal)</td>
+       <td class="rate">1,640,100<br />33 / 40</td>
+       <td class="rate">1,445,940<br />5 / 5</td>
+       <td class="rate">1,639,920<br />15 / 20</td>
+       <td class="rate">1,640,100<br />9 / 11</td>
+       <td class="rate">1,527,810<br />2 / 2</td>
+       <td class="rate">1,462,030<br />1 / 1</td>
+       <td class="rate">1,568,360<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.05</td>
+       <td class="card">寒符「リンガリングコールド -Hard-」<br />(Hard)</td>
+       <td class="rate">1,817,980<br />14 / 17</td>
+       <td class="rate">1,662,080<br />3 / 4</td>
+       <td class="rate">1,738,430<br />5 / 6</td>
+       <td class="rate">1,817,980<br />1 / 1</td>
+       <td class="rate">1,639,310<br />1 / 1</td>
+       <td class="rate">1,733,480<br />2 / 3</td>
+       <td class="rate">1,762,270<br />2 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.06</td>
+       <td class="card">寒符「リンガリングコールド -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">1,849,080<br />20 / 24</td>
+       <td class="rate">1,745,120<br />3 / 5</td>
+       <td class="rate">1,844,320<br />7 / 7</td>
+       <td class="rate">1,849,080<br />1 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">1,771,740<br />7 / 7</td>
+       <td class="rate">1,775,940<br />2 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.07</td>
+       <td class="card">冬符「フラワーウィザラウェイ -Easy-」<br />(Easy)</td>
+       <td class="rate">1,649,420<br />18 / 21</td>
+       <td class="rate">1,479,460<br />1 / 1</td>
+       <td class="rate">1,622,740<br />7 / 9</td>
+       <td class="rate">1,649,420<br />3 / 3</td>
+       <td class="rate">1,631,240<br />5 / 5</td>
+       <td class="rate">1,551,790<br />1 / 2</td>
+       <td class="rate">1,441,940<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.08</td>
+       <td class="card">冬符「フラワーウィザラウェイ」<br />(Normal)</td>
+       <td class="rate">1,670,080<br />35 / 40</td>
+       <td class="rate">1,486,420<br />4 / 5</td>
+       <td class="rate">1,659,960<br />17 / 20</td>
+       <td class="rate">1,670,080<br />10 / 11</td>
+       <td class="rate">1,361,260<br />2 / 2</td>
+       <td class="rate">1,515,740<br />1 / 1</td>
+       <td class="rate">1,561,540<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.09</td>
+       <td class="card">白符「アンデュレイションレイ」<br />(Hard)</td>
+       <td class="rate">1,788,510<br />11 / 17</td>
+       <td class="rate">1,567,770<br />2 / 4</td>
+       <td class="rate">1,788,510<br />6 / 6</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">1,680,640<br />1 / 1</td>
+       <td class="rate">1,719,780<br />1 / 3</td>
+       <td class="rate">1,706,190<br />1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.10</td>
+       <td class="card">怪符「テーブルターニング」<br />(Lunatic)</td>
+       <td class="rate">1,864,870<br />9 / 22</td>
+       <td class="rate">1,674,380<br />2 / 5</td>
+       <td class="rate">1,846,520<br />1 / 7</td>
+       <td class="rate">1,864,870<br />1 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">1,788,870<br />5 / 7</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.11</td>
+       <td class="card">仙符「鳳凰卵 -Easy-」<br />(Easy)</td>
+       <td class="rate">1,677,870<br />18 / 21</td>
+       <td class="rate">1,332,140<br />1 / 1</td>
+       <td class="rate">1,579,960<br />7 / 9</td>
+       <td class="rate">1,663,100<br />3 / 3</td>
+       <td class="rate">1,677,870<br />5 / 5</td>
+       <td class="rate">967,660<br />1 / 2</td>
+       <td class="rate">1,503,410<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.12</td>
+       <td class="card">仙符「鳳凰卵」<br />(Normal)</td>
+       <td class="rate">1,769,140<br />33 / 37</td>
+       <td class="rate">1,466,460<br />4 / 4</td>
+       <td class="rate">1,742,940<br />16 / 19</td>
+       <td class="rate">1,769,140<br />9 / 10</td>
+       <td class="rate">1,686,420<br />2 / 2</td>
+       <td class="rate">1,493,190<br />1 / 1</td>
+       <td class="rate">1,616,300<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.13</td>
+       <td class="card">仙符「鳳凰展翅」<br />(Hard)</td>
+       <td class="rate">1,775,800<br />9 / 18</td>
+       <td class="rate">1,493,930<br />2 / 6</td>
+       <td class="rate">1,771,070<br />4 / 6</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">1,775,800<br />1 / 1</td>
+       <td class="rate">1,535,630<br />1 / 2</td>
+       <td class="rate">1,744,460<br />1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.14</td>
+       <td class="card">仙符「鳳凰展翅 -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">1,860,620<br />7 / 40</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">1,860,620<br />7 / 27</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 7</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.15</td>
+       <td class="card">式符「飛翔晴明 -Easy-」<br />(Easy)</td>
+       <td class="rate">1,902,240<br />13 / 21</td>
+       <td class="rate">1,750,760<br />1 / 1</td>
+       <td class="rate">1,782,120<br />4 / 9</td>
+       <td class="rate">1,902,240<br />2 / 3</td>
+       <td class="rate">1,862,850<br />4 / 5</td>
+       <td class="rate">1,731,600<br />1 / 2</td>
+       <td class="rate">1,828,810<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.16</td>
+       <td class="card">式符「飛翔晴明」<br />(Normal)</td>
+       <td class="rate">2,018,900<br />31 / 37</td>
+       <td class="rate">1,813,910<br />4 / 4</td>
+       <td class="rate">1,974,260<br />18 / 19</td>
+       <td class="rate">2,018,900<br />5 / 10</td>
+       <td class="rate">1,883,820<br />2 / 2</td>
+       <td class="rate">1,805,060<br />1 / 1</td>
+       <td class="rate">1,852,880<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.17</td>
+       <td class="card">陰陽「道満晴明」<br />(Hard)</td>
+       <td class="rate">2,080,330<br />2 / 18</td>
+       <td class="rate">1,887,890<br />1 / 6</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">2,080,330<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.18</td>
+       <td class="card">陰陽「晴明大紋」<br />(Lunatic)</td>
+       <td class="rate">2,009,920<br />1 / 40</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">2,009,920<br />1 / 27</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 7</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.19</td>
+       <td class="card">天符「天仙鳴動 -Easy-」<br />(Easy)</td>
+       <td class="rate">1,680,730<br />8 / 20</td>
+       <td class="rate">1,680,730<br />1 / 1</td>
+       <td class="rate">1,294,740<br />2 / 9</td>
+       <td class="rate">1,655,290<br />2 / 3</td>
+       <td class="rate">1,278,780<br />1 / 4</td>
+       <td class="rate">1,528,020<br />1 / 2</td>
+       <td class="rate">1,337,490<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.20</td>
+       <td class="card">天符「天仙鳴動」<br />(Normal)</td>
+       <td class="rate">1,802,870<br />14 / 37</td>
+       <td class="rate">1,755,630<br />3 / 4</td>
+       <td class="rate">1,667,910<br />2 / 19</td>
+       <td class="rate">1,802,870<br />8 / 10</td>
+       <td class="rate">1,723,000<br />1 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.21</td>
+       <td class="card">翔符「飛翔韋駄天」<br />(Hard)</td>
+       <td class="rate">1,889,350<br />8 / 16</td>
+       <td class="rate">1,794,780<br />2 / 5</td>
+       <td class="rate">1,743,220<br />3 / 6</td>
+       <td class="rate">1,889,350<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">1,809,230<br />1 / 1</td>
+       <td class="rate">1,718,280<br />1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.22</td>
+       <td class="card">童符「護法天童乱舞」<br />(Lunatic)</td>
+       <td class="rate">2,041,020<br />18 / 38</td>
+       <td class="rate">1,789,300<br />1 / 3</td>
+       <td class="rate">1,885,810<br />10 / 26</td>
+       <td class="rate">1,913,690<br />1 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">2,041,020<br />5 / 6</td>
+       <td class="rate">1,583,640<br />1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.23</td>
+       <td class="card">仙符「屍解永遠 -Easy-」<br />(Easy)</td>
+       <td class="rate">1,801,440<br />14 / 20</td>
+       <td class="rate">1,629,970<br />1 / 1</td>
+       <td class="rate">1,727,200<br />5 / 9</td>
+       <td class="rate">1,470,670<br />2 / 3</td>
+       <td class="rate">1,607,640<br />3 / 4</td>
+       <td class="rate">1,801,440<br />2 / 2</td>
+       <td class="rate">1,682,250<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.24</td>
+       <td class="card">仙符「屍解永遠」<br />(Normal)</td>
+       <td class="rate">1,978,360<br />28 / 37</td>
+       <td class="rate">1,736,290<br />3 / 4</td>
+       <td class="rate">1,930,430<br />12 / 19</td>
+       <td class="rate">1,978,360<br />9 / 10</td>
+       <td class="rate">1,707,420<br />2 / 2</td>
+       <td class="rate">1,829,430<br />1 / 1</td>
+       <td class="rate">1,810,270<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.25</td>
+       <td class="card">鬼符「鬼門金神」<br />(Hard)</td>
+       <td class="rate">2,107,700<br />2 / 16</td>
+       <td class="rate">1,808,420<br />1 / 5</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">2,107,700<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.26</td>
+       <td class="card">方符「奇門遁甲」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 38</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 26</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.27</td>
+       <td class="card">操符「乙女文楽」<br />(Hard)</td>
+       <td class="rate">2,462,320<br />10 / 14</td>
+       <td class="rate">2,218,750<br />2 / 2</td>
+       <td class="rate">2,462,320<br />7 / 7</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">1,624,600<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.28</td>
+       <td class="card">操符「乙女文楽 -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">2,479,460<br />7 / 49</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">2,479,460<br />4 / 30</td>
+       <td class="rate">2,471,720<br />3 / 8</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.29</td>
+       <td class="card">蒼符「博愛の仏蘭西人形 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,053,370<br />14 / 18</td>
+       <td class="rate">1,768,210<br />1 / 1</td>
+       <td class="rate">1,901,330<br />6 / 9</td>
+       <td class="rate">2,053,370<br />3 / 3</td>
+       <td class="rate">1,902,340<br />2 / 2</td>
+       <td class="rate">1,683,750<br />1 / 2</td>
+       <td class="rate">1,786,460<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.30</td>
+       <td class="card">蒼符「博愛の仏蘭西人形」<br />(Normal)</td>
+       <td class="rate">2,143,350<br />23 / 37</td>
+       <td class="rate">1,808,600<br />3 / 4</td>
+       <td class="rate">2,092,330<br />10 / 19</td>
+       <td class="rate">2,143,350<br />9 / 10</td>
+       <td class="rate">1,625,260<br />1 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.31</td>
+       <td class="card">蒼符「博愛の仏蘭西人形 -Hard-」<br />(Hard)</td>
+       <td class="rate">2,174,520<br />3 / 14</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">2,019,070<br />2 / 7</td>
+       <td class="rate">2,174,520<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.32</td>
+       <td class="card">蒼符「博愛のオルレアン人形」<br />(Lunatic)</td>
+       <td class="rate">2,322,560<br />1 / 48</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 30</td>
+       <td class="rate">0<br />0 / 8</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">2,322,560<br />1 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.33</td>
+       <td class="card">紅符「紅毛の和蘭人形 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,120,180<br />15 / 18</td>
+       <td class="rate">1,936,400<br />1 / 1</td>
+       <td class="rate">1,976,860<br />7 / 9</td>
+       <td class="rate">2,027,800<br />2 / 3</td>
+       <td class="rate">2,061,210<br />2 / 2</td>
+       <td class="rate">2,120,180<br />2 / 2</td>
+       <td class="rate">1,816,270<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.34</td>
+       <td class="card">紅符「紅毛の和蘭人形」<br />(Normal)</td>
+       <td class="rate">2,243,990<br />30 / 37</td>
+       <td class="rate">2,148,360<br />4 / 4</td>
+       <td class="rate">2,243,990<br />14 / 19</td>
+       <td class="rate">2,231,860<br />8 / 10</td>
+       <td class="rate">2,002,170<br />2 / 2</td>
+       <td class="rate">2,182,320<br />1 / 1</td>
+       <td class="rate">1,916,550<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.35</td>
+       <td class="card">白符「白亜の露西亜人形」<br />(Hard)</td>
+       <td class="rate">2,491,560<br />2 / 14</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 7</td>
+       <td class="rate">2,484,250<br />1 / 1</td>
+       <td class="rate">2,491,560<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.36</td>
+       <td class="card">白符「白亜の露西亜人形 -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">2,475,140<br />1 / 48</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 30</td>
+       <td class="rate">2,475,140<br />1 / 8</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.37</td>
+       <td class="card">闇符「霧の倫敦人形 -Easy-」<br />(Easy)</td>
+       <td class="rate">1,698,420<br />7 / 18</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">1,698,420<br />4 / 9</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">1,677,880<br />1 / 2</td>
+       <td class="rate">1,626,060<br />2 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.38</td>
+       <td class="card">闇符「霧の倫敦人形」<br />(Normal)</td>
+       <td class="rate">2,028,180<br />11 / 37</td>
+       <td class="rate">1,680,850<br />2 / 4</td>
+       <td class="rate">1,932,060<br />5 / 19</td>
+       <td class="rate">2,028,180<br />4 / 10</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.39</td>
+       <td class="card">廻符「輪廻の西蔵人形」<br />(Hard)</td>
+       <td class="rate">2,113,030<br />2 / 13</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,113,030<br />1 / 7</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,059,270<br />1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.40</td>
+       <td class="card">雅符「春の京人形」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 46</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 28</td>
+       <td class="rate">0<br />0 / 8</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.41</td>
+       <td class="card">咒詛「魔彩光の上海人形 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,076,050<br />16 / 18</td>
+       <td class="rate">1,527,880<br />1 / 1</td>
+       <td class="rate">1,998,470<br />7 / 9</td>
+       <td class="rate">2,076,050<br />3 / 3</td>
+       <td class="rate">1,996,000<br />2 / 2</td>
+       <td class="rate">1,777,250<br />2 / 2</td>
+       <td class="rate">1,734,410<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.42</td>
+       <td class="card">咒詛「魔彩光の上海人形」<br />(Normal)</td>
+       <td class="rate">2,161,470<br />15 / 37</td>
+       <td class="rate">1,905,950<br />3 / 4</td>
+       <td class="rate">2,076,130<br />5 / 19</td>
+       <td class="rate">2,161,470<br />5 / 10</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">1,942,050<br />1 / 1</td>
+       <td class="rate">1,987,150<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.43</td>
+       <td class="card">咒詛「魔彩光の上海人形 -Hard-」<br />(Hard)</td>
+       <td class="rate">2,211,990<br />4 / 13</td>
+       <td class="rate">2,112,020<br />1 / 1</td>
+       <td class="rate">2,202,520<br />1 / 7</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,133,030<br />1 / 1</td>
+       <td class="rate">2,211,990<br />1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.44</td>
+       <td class="card">咒詛「首吊り蓬莱人形」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 46</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 28</td>
+       <td class="rate">0<br />0 / 8</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.45</td>
+       <td class="card">騒符「ファントムディニング -Easy-」<br />(Easy)</td>
+       <td class="rate">2,897,520<br />7 / 18</td>
+       <td class="rate">2,428,340<br />1 / 2</td>
+       <td class="rate">2,463,480<br />1 / 8</td>
+       <td class="rate">2,897,520<br />1 / 3</td>
+       <td class="rate">2,249,080<br />1 / 2</td>
+       <td class="rate">2,555,260<br />2 / 2</td>
+       <td class="rate">2,607,350<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.46</td>
+       <td class="card">騒符「ファントムディニング」<br />(Normal)</td>
+       <td class="rate">2,858,500<br />20 / 36</td>
+       <td class="rate">2,517,420<br />2 / 4</td>
+       <td class="rate">2,781,730<br />9 / 16</td>
+       <td class="rate">2,858,500<br />5 / 11</td>
+       <td class="rate">2,456,590<br />1 / 2</td>
+       <td class="rate">2,657,140<br />2 / 2</td>
+       <td class="rate">2,693,990<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.47</td>
+       <td class="card">騒符「ライブポルターガイスト」<br />(Hard)</td>
+       <td class="rate">3,479,890<br />2 / 20</td>
+       <td class="rate">2,946,150<br />1 / 1</td>
+       <td class="rate">3,479,890<br />1 / 14</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.48</td>
+       <td class="card">騒符「ライブポルターガイスト -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">4,124,520<br />5 / 40</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 25</td>
+       <td class="rate">4,005,140<br />2 / 4</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">4,124,520<br />3 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.49</td>
+       <td class="card">弦奏「グァルネリ・デル・ジェス -Easy-」<br />(Easy)</td>
+       <td class="rate">2,397,610<br />3 / 11</td>
+       <td class="rate">2,138,340<br />1 / 2</td>
+       <td class="rate">1,890,460<br />1 / 8</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">2,397,610<br />1 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.50</td>
+       <td class="card">弦奏「グァルネリ・デル・ジェス」<br />(Normal)</td>
+       <td class="rate">2,554,480<br />3 / 20</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">2,378,470<br />2 / 14</td>
+       <td class="rate">2,554,480<br />1 / 2</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.51</td>
+       <td class="card">神弦「ストラディヴァリウス」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.52</td>
+       <td class="card">偽弦「スードストラディヴァリウス」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.53</td>
+       <td class="card">管霊「ヒノファンタズム -Easy-」<br />(Easy)</td>
+       <td class="rate">2,537,050<br />2 / 2</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">2,537,050<br />1 / 1</td>
+       <td class="rate">2,152,120<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.54</td>
+       <td class="card">管霊「ヒノファンタズム」<br />(Normal)</td>
+       <td class="rate">2,428,120<br />1 / 3</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">2,428,120<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.55</td>
+       <td class="card">冥管「ゴーストクリフォード」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.56</td>
+       <td class="card">管霊「ゴーストクリフォード -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.57</td>
+       <td class="card">冥鍵「ファツィオーリ冥奏 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,414,010<br />1 / 5</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">2,414,010<br />1 / 2</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.58</td>
+       <td class="card">冥鍵「ファツィオーリ冥奏」<br />(Normal)</td>
+       <td class="rate">0<br />0 / 13</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.59</td>
+       <td class="card">鍵霊「ベーゼンドルファー神奏」<br />(Hard)</td>
+       <td class="rate">3,118,350<br />4 / 17</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">3,118,350<br />4 / 12</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.60</td>
+       <td class="card">鍵霊「ベーゼンドルファー神奏 -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">2,576,720<br />1 / 33</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">2,576,720<br />1 / 20</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.61</td>
+       <td class="card">合葬「プリズムコンチェルト -Easy-」<br />(Easy)</td>
+       <td class="rate">2,510,180<br />2 / 18</td>
+       <td class="rate">2,510,180<br />1 / 2</td>
+       <td class="rate">0<br />0 / 8</td>
+       <td class="rate">2,381,640<br />1 / 3</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.62</td>
+       <td class="card">合葬「プリズムコンチェルト」<br />(Normal)</td>
+       <td class="rate">2,570,940<br />4 / 34</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">2,461,010<br />1 / 15</td>
+       <td class="rate">0<br />0 / 11</td>
+       <td class="rate">2,481,750<br />1 / 2</td>
+       <td class="rate">2,464,310<br />1 / 1</td>
+       <td class="rate">2,570,940<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.63</td>
+       <td class="card">騒葬「スティジャンリバーサイド」<br />(Hard)</td>
+       <td class="rate">2,389,910<br />4 / 19</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,389,910<br />4 / 13</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.64</td>
+       <td class="card">騒葬「スティジャンリバーサイド -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 38</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 24</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.65</td>
+       <td class="card">大合葬「霊車コンチェルトグロッソ -Easy-」<br />(Easy)</td>
+       <td class="rate">2,322,120<br />8 / 18</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">2,235,760<br />4 / 8</td>
+       <td class="rate">2,319,770<br />2 / 3</td>
+       <td class="rate">2,075,720<br />1 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">2,322,120<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.66</td>
+       <td class="card">大合葬「霊車コンチェルトグロッソ」<br />(Normal)</td>
+       <td class="rate">2,723,660<br />4 / 34</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">2,414,860<br />2 / 15</td>
+       <td class="rate">2,402,400<br />1 / 11</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,723,660<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.67</td>
+       <td class="card">大合葬「霊車コンチェルトグロッソ改」<br />(Hard)</td>
+       <td class="rate">2,700,620<br />2 / 19</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 13</td>
+       <td class="rate">2,581,820<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,700,620<br />1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.68</td>
+       <td class="card">大合葬「霊車コンチェルトグロッソ怪」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 37</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 24</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.69</td>
+       <td class="card">幽鬼剣「妖童餓鬼の断食 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,844,180<br />6 / 21</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,839,380<br />4 / 12</td>
+       <td class="rate">2,789,250<br />1 / 3</td>
+       <td class="rate">2,844,180<br />1 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.70</td>
+       <td class="card">幽鬼剣「妖童餓鬼の断食」<br />(Normal)</td>
+       <td class="rate">2,948,100<br />3 / 35</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">2,948,100<br />2 / 15</td>
+       <td class="rate">0<br />0 / 12</td>
+       <td class="rate">2,943,020<br />1 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.71</td>
+       <td class="card">餓鬼剣「餓鬼道草紙」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.72</td>
+       <td class="card">餓王剣「餓鬼十王の報い」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 31</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 20</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.73</td>
+       <td class="card">獄界剣「二百由旬の一閃 -Easy-」<br />(Easy)</td>
+       <td class="rate">1,828,850<br />1 / 19</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 11</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">1,828,850<br />1 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.74</td>
+       <td class="card">獄界剣「二百由旬の一閃」<br />(Normal)</td>
+       <td class="rate">2,550,790<br />1 / 35</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">2,550,790<br />1 / 15</td>
+       <td class="rate">0<br />0 / 12</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.75</td>
+       <td class="card">獄炎剣「業風閃影陣」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.76</td>
+       <td class="card">獄神剣「業風神閃斬」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 31</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 20</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.77</td>
+       <td class="card">畜趣剣「無為無策の冥罰 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,582,130<br />14 / 17</td>
+       <td class="rate">2,428,320<br />1 / 1</td>
+       <td class="rate">2,582,130<br />7 / 10</td>
+       <td class="rate">2,536,420<br />2 / 2</td>
+       <td class="rate">2,301,050<br />2 / 2</td>
+       <td class="rate">2,097,640<br />1 / 1</td>
+       <td class="rate">2,383,100<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.78</td>
+       <td class="card">畜趣剣「無為無策の冥罰」<br />(Normal)</td>
+       <td class="rate">1,648,340<br />1 / 33</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">1,648,340<br />1 / 14</td>
+       <td class="rate">0<br />0 / 11</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.79</td>
+       <td class="card">修羅剣「現世妄執」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.80</td>
+       <td class="card">修羅剣「現世妄執 -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 31</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 20</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.81</td>
+       <td class="card">人界剣「悟入幻想 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,414,110<br />5 / 16</td>
+       <td class="rate">2,356,490<br />1 / 1</td>
+       <td class="rate">2,411,760<br />2 / 9</td>
+       <td class="rate">2,414,110<br />1 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,274,300<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.82</td>
+       <td class="card">人界剣「悟入幻想」<br />(Normal)</td>
+       <td class="rate">2,618,910<br />2 / 32</td>
+       <td class="rate">2,500,050<br />1 / 4</td>
+       <td class="rate">0<br />0 / 13</td>
+       <td class="rate">0<br />0 / 11</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">2,618,910<br />1 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.83</td>
+       <td class="card">人世剣「大悟顕晦」<br />(Hard)</td>
+       <td class="rate">2,512,650<br />1 / 15</td>
+       <td class="rate">2,512,650<br />1 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.84</td>
+       <td class="card">人神剣「俗諦常住」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 31</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 20</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.85</td>
+       <td class="card">天上剣「天人の五衰 -Easy-」<br />(Easy)</td>
+       <td class="rate">2,788,820<br />1 / 16</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">2,788,820<br />1 / 9</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.86</td>
+       <td class="card">天上剣「天人の五衰」<br />(Normal)</td>
+       <td class="rate">2,949,830<br />2 / 32</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 13</td>
+       <td class="rate">2,949,830<br />2 / 11</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.87</td>
+       <td class="card">天界剣「七魄忌諱」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.88</td>
+       <td class="card">天神剣「三魂七魄」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 30</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 19</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.89</td>
+       <td class="card">六道剣「一念無量劫 -Easy-」<br />(Easy)</td>
+       <td class="rate">3,755,620<br />8 / 23</td>
+       <td class="rate">2,649,960<br />1 / 3</td>
+       <td class="rate">3,755,620<br />4 / 12</td>
+       <td class="rate">3,261,800<br />1 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">3,541,560<br />2 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.90</td>
+       <td class="card">六道剣「一念無量劫」<br />(Normal)</td>
+       <td class="rate">3,786,720<br />3 / 32</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">3,759,320<br />2 / 14</td>
+       <td class="rate">3,786,720<br />1 / 9</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.91</td>
+       <td class="card">六道剣「一念無量劫 -Hard-」<br />(Hard)</td>
+       <td class="rate">3,894,680<br />1 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">3,894,680<br />1 / 10</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.92</td>
+       <td class="card">六道剣「一念無量劫 -Lunatic-」<br />(Lunatic)</td>
+       <td class="rate">3,993,890<br />63 / 71</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">3,993,890<br />59 / 61</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">3,796,100<br />1 / 6</td>
+       <td class="rate">3,991,060<br />3 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.93</td>
+       <td class="card">亡郷「亡我郷 -さまよえる魂-」<br />(Easy)</td>
+       <td class="rate">4,047,320<br />3 / 23</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">4,047,320<br />2 / 12</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">3,691,760<br />1 / 2</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.94</td>
+       <td class="card">亡郷「亡我郷 -宿罪-」<br />(Normal)</td>
+       <td class="rate">3,160,250<br />1 / 31</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">3,160,250<br />1 / 13</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.95</td>
+       <td class="card">亡郷「亡我郷 -道無き道-」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 10</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.96</td>
+       <td class="card">亡郷「亡我郷 -自尽-」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 69</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 60</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.97</td>
+       <td class="card">亡舞「生者必滅の理 -眩惑-」<br />(Easy)</td>
+       <td class="rate">0<br />0 / 23</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 12</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.98</td>
+       <td class="card">亡舞「生者必滅の理 -死蝶-」<br />(Normal)</td>
+       <td class="rate">0<br />0 / 29</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 12</td>
+       <td class="rate">0<br />0 / 8</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.99</td>
+       <td class="card">亡舞「生者必滅の理 -毒蛾-」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 10</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.100</td>
+       <td class="card">亡舞「生者必滅の理 -魔境-」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 68</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 59</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 3</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.101</td>
+       <td class="card">華霊「ゴーストバタフライ」<br />(Easy)</td>
+       <td class="rate">3,476,420<br />6 / 20</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">3,384,090<br />2 / 10</td>
+       <td class="rate">3,476,420<br />2 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">3,224,130<br />2 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.102</td>
+       <td class="card">華霊「スワローテイルバタフライ」<br />(Normal)</td>
+       <td class="rate">0<br />0 / 26</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 11</td>
+       <td class="rate">0<br />0 / 7</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.103</td>
+       <td class="card">華霊「ディープルーティドバタフライ」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 14</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.104</td>
+       <td class="card">華霊「バタフライディルージョン」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 64</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 55</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.105</td>
+       <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -偽霊-」<br />(Easy)</td>
+       <td class="rate">8,646,100<br />2 / 19</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">8,646,100<br />1 / 10</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,957,170<br />1 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.106</td>
+       <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -亡霊-」<br />(Normal)</td>
+       <td class="rate">9,439,010<br />3 / 21</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">9,439,010<br />2 / 10</td>
+       <td class="rate">6,662,200<br />1 / 5</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.107</td>
+       <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -幻霊-」<br />(Hard)</td>
+       <td class="rate">12,689,500<br />9 / 14</td>
+       <td class="rate">7,362,000<br />1 / 1</td>
+       <td class="rate">12,689,500<br />4 / 9</td>
+       <td class="rate">8,421,860<br />1 / 1</td>
+       <td class="rate">10,021,420<br />1 / 1</td>
+       <td class="rate">8,417,600<br />1 / 1</td>
+       <td class="rate">11,469,660<br />1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.108</td>
+       <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -神霊-」<br />(Lunatic)</td>
+       <td class="rate">17,060,700<br />39 / 61</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">17,060,700<br />33 / 53</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">11,154,900<br />4 / 5</td>
+       <td class="rate">16,295,380<br />2 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.109</td>
+       <td class="card">桜符「完全なる墨染の桜 -封印-」<br />(Easy)</td>
+       <td class="rate">3,116,160<br />1 / 19</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">3,116,160<br />1 / 10</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.110</td>
+       <td class="card">桜符「完全なる墨染の桜 -亡我-」<br />(Normal)</td>
+       <td class="rate">0<br />0 / 20</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 10</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.111</td>
+       <td class="card">桜符「完全なる墨染の桜 -春眠-」<br />(Hard)</td>
+       <td class="rate">0<br />0 / 14</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.112</td>
+       <td class="card">桜符「完全なる墨染の桜 -開花-」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 58</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 50</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.113</td>
+       <td class="card">「反魂蝶 -一分咲-」<br />(Easy)</td>
+       <td class="rate">5,528,940<br />2 / 14</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,528,940<br />2 / 8</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.114</td>
+       <td class="card">「反魂蝶 -参分咲-」<br />(Normal)</td>
+       <td class="rate">5,266,200<br />1 / 17</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,266,200<br />1 / 7</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.115</td>
+       <td class="card">「反魂蝶 -伍分咲-」<br />(Hard)</td>
+       <td class="rate">6,996,200<br />1 / 14</td>
+       <td class="rate">6,996,200<br />1 / 1</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.116</td>
+       <td class="card">「反魂蝶 -八分咲-」<br />(Lunatic)</td>
+       <td class="rate">0<br />0 / 55</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 49</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 0</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.117</td>
+       <td class="card">鬼符「青鬼赤鬼」<br />(Extra)</td>
+       <td class="rate">5,068,180<br />4 / 51</td>
+       <td class="rate">4,469,760<br />2 / 28</td>
+       <td class="rate">4,698,130<br />1 / 10</td>
+       <td class="rate">5,068,180<br />1 / 3</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.118</td>
+       <td class="card">鬼神「飛翔毘沙門天」<br />(Extra)</td>
+       <td class="rate">4,574,870<br />2 / 48</td>
+       <td class="rate">0<br />0 / 27</td>
+       <td class="rate">0<br />0 / 9</td>
+       <td class="rate">4,574,870<br />2 / 3</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.119</td>
+       <td class="card">式神「仙狐思念」<br />(Extra)</td>
+       <td class="rate">5,898,020<br />22 / 43</td>
+       <td class="rate">5,898,020<br />15 / 23</td>
+       <td class="rate">5,475,410<br />4 / 9</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,810,640<br />3 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.120</td>
+       <td class="card">式神「十二神将の宴」<br />(Extra)</td>
+       <td class="rate">0<br />0 / 41</td>
+       <td class="rate">0<br />0 / 22</td>
+       <td class="rate">0<br />0 / 8</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 4</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.121</td>
+       <td class="card">式輝「狐狸妖怪レーザー」<br />(Extra)</td>
+       <td class="rate">6,774,210<br />10 / 38</td>
+       <td class="rate">6,774,210<br />2 / 20</td>
+       <td class="rate">4,750,630<br />1 / 8</td>
+       <td class="rate">4,873,150<br />3 / 3</td>
+       <td class="rate">4,530,430<br />2 / 2</td>
+       <td class="rate">4,295,560<br />1 / 1</td>
+       <td class="rate">5,695,980<br />1 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.122</td>
+       <td class="card">式輝「四面楚歌チャーミング」<br />(Extra)</td>
+       <td class="rate">5,027,280<br />1 / 34</td>
+       <td class="rate">0<br />0 / 16</td>
+       <td class="rate">0<br />0 / 8</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,027,280<br />1 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.123</td>
+       <td class="card">式輝「プリンセス天狐 -Illusion-」<br />(Extra)</td>
+       <td class="rate">5,215,750<br />5 / 28</td>
+       <td class="rate">4,660,100<br />1 / 11</td>
+       <td class="rate">5,215,750<br />2 / 7</td>
+       <td class="rate">5,154,130<br />1 / 3</td>
+       <td class="rate">4,700,890<br />1 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.124</td>
+       <td class="card">式弾「アルティメットブディスト」<br />(Extra)</td>
+       <td class="rate">4,751,210<br />9 / 22</td>
+       <td class="rate">0<br />0 / 7</td>
+       <td class="rate">4,751,210<br />6 / 7</td>
+       <td class="rate">4,325,890<br />1 / 2</td>
+       <td class="rate">3,535,040<br />1 / 2</td>
+       <td class="rate">3,249,830<br />1 / 1</td>
+       <td class="rate">0<br />0 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.125</td>
+       <td class="card">式弾「ユーニラタルコンタクト」<br />(Extra)</td>
+       <td class="rate">0<br />0 / 16</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 7</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.126</td>
+       <td class="card">式神「橙」<br />(Extra)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 6</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.127</td>
+       <td class="card">「狐狗狸さんの契約」<br />(Extra)</td>
+       <td class="rate">0<br />0 / 11</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.128</td>
+       <td class="card">幻神「飯綱権現降臨」<br />(Extra)</td>
+       <td class="rate">0<br />0 / 11</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.129</td>
+       <td class="card">式神「前鬼後鬼の守護」<br />(Phantasm)</td>
+       <td class="rate">6,338,020<br />16 / 59</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">6,338,020<br />6 / 34</td>
+       <td class="rate">4,960,220<br />3 / 5</td>
+       <td class="rate">4,993,500<br />2 / 7</td>
+       <td class="rate">5,710,860<br />1 / 1</td>
+       <td class="rate">4,722,660<br />4 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.130</td>
+       <td class="card">式神「憑依荼吉尼天」<br />(Phantasm)</td>
+       <td class="rate">5,388,230<br />26 / 58</td>
+       <td class="rate">4,946,650<br />1 / 4</td>
+       <td class="rate">4,934,840<br />16 / 33</td>
+       <td class="rate">4,889,730<br />2 / 5</td>
+       <td class="rate">4,858,760<br />2 / 7</td>
+       <td class="rate">4,805,210<br />1 / 1</td>
+       <td class="rate">5,388,230<br />4 / 8</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.131</td>
+       <td class="card">結界「夢と現の呪」<br />(Phantasm)</td>
+       <td class="rate">9,991,490<br />3 / 55</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">9,991,490<br />3 / 33</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.132</td>
+       <td class="card">結界「動と静の均衡」<br />(Phantasm)</td>
+       <td class="rate">5,387,700<br />8 / 51</td>
+       <td class="rate">4,756,590<br />1 / 2</td>
+       <td class="rate">3,015,670<br />2 / 32</td>
+       <td class="rate">3,589,110<br />1 / 5</td>
+       <td class="rate">4,387,400<br />3 / 4</td>
+       <td class="rate">5,387,700<br />1 / 1</td>
+       <td class="rate">0<br />0 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.133</td>
+       <td class="card">結界「光と闇の網目」<br />(Phantasm)</td>
+       <td class="rate">7,301,770<br />1 / 46</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">7,301,770<br />1 / 27</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.134</td>
+       <td class="card">罔両「ストレートとカーブの夢郷」<br />(Phantasm)</td>
+       <td class="rate">5,318,090<br />3 / 42</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">5,318,090<br />2 / 24</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">5,150,490<br />1 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.135</td>
+       <td class="card">罔両「八雲紫の神隠し」<br />(Phantasm)</td>
+       <td class="rate">6,047,690<br />14 / 41</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">5,863,440<br />8 / 24</td>
+       <td class="rate">6,047,690<br />4 / 4</td>
+       <td class="rate">5,471,460<br />2 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.136</td>
+       <td class="card">罔両「禅寺に棲む妖蝶」<br />(Phantasm)</td>
+       <td class="rate">5,946,330<br />19 / 39</td>
+       <td class="rate">5,115,870<br />1 / 2</td>
+       <td class="rate">5,701,240<br />12 / 23</td>
+       <td class="rate">5,946,330<br />1 / 4</td>
+       <td class="rate">5,354,470<br />1 / 3</td>
+       <td class="rate">3,863,810<br />1 / 1</td>
+       <td class="rate">5,277,010<br />3 / 6</td>
+      </tr>
+      <tr>
+       <td class="number">No.137</td>
+       <td class="card">魍魎「二重黒死蝶」<br />(Phantasm)</td>
+       <td class="rate">0<br />0 / 36</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 20</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 6</td>
+      </tr>
+      <tr>
+       <td class="number">No.138</td>
+       <td class="card">式神「八雲藍」<br />(Phantasm)</td>
+       <td class="rate">5,560,200<br />6 / 34</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,560,200<br />2 / 19</td>
+       <td class="rate">5,440,540<br />1 / 4</td>
+       <td class="rate">5,109,110<br />1 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,469,500<br />2 / 6</td>
+      </tr>
+      <tr>
+       <td class="number">No.139</td>
+       <td class="card">「人間と妖怪の境界」<br />(Phantasm)</td>
+       <td class="rate">0<br />0 / 32</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 19</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.140</td>
+       <td class="card">結界「生と死の境界」<br />(Phantasm)</td>
+       <td class="rate">5,361,980<br />1 / 25</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">5,361,980<br />1 / 13</td>
+       <td class="rate">0<br />0 / 4</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 3</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.141</td>
+       <td class="card">紫奥義「弾幕結界」<br />(Phantasm)</td>
+       <td class="rate">0<br />0 / 15</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 5</td>
+       <td class="rate">0<br />0 / 3</td>
+       <td class="rate">0<br />0 / 2</td>
+       <td class="rate">0<br />0 / 1</td>
+       <td class="rate">0<br />0 / 3</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td colspan="2">Total</td>
+       <td class="rate">349,453,150<br />966 / 3,907</td>
+       <td class="rate">130,240,930<br />107 / 447</td>
+       <td class="rate">284,173,490<br />473 / 2,138</td>
+       <td class="rate">174,427,540<br />159 / 492</td>
+       <td class="rate">124,442,930<br />77 / 226</td>
+       <td class="rate">132,946,670<br />84 / 311</td>
+       <td class="rate">138,106,700<br />66 / 293</td>
+      </tr>
+     </tfoot>
+    </table>
+
+    <table class="rate_per_level">
+     <caption id="rate_per_level">難易度別スペルカード蒐集率 （取得回数 / 遭遇回数 / 総数）</caption>
+     <thead>
+      <tr>
+       <th class="level">難易度</th>
+       <th class="character">全主人公合計</th>
+       <th class="character">博麗 霊夢（霊）</th>
+       <th class="character">博麗 霊夢（夢）</th>
+       <th class="character">霧雨 魔理沙（魔）</th>
+       <th class="character">霧雨 魔理沙（恋）</th>
+       <th class="character">十六夜 咲夜（幻）</th>
+       <th class="character">十六夜 咲夜（時）</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="level">Easy</td>
+       <td class="rate">27 / 28 / 28</td>
+       <td class="rate">15 / 26 / 28</td>
+       <td class="rate">23 / 26 / 28</td>
+       <td class="rate">17 / 26 / 28</td>
+       <td class="rate">17 / 26 / 28</td>
+       <td class="rate">17 / 27 / 28</td>
+       <td class="rate">14 / 26 / 28</td>
+      </tr>
+      <tr>
+       <td class="level">Normal</td>
+       <td class="rate">24 / 28 / 28</td>
+       <td class="rate">12 / 26 / 28</td>
+       <td class="rate">21 / 27 / 28</td>
+       <td class="rate">16 / 27 / 28</td>
+       <td class="rate">11 / 26 / 28</td>
+       <td class="rate">10 / 26 / 28</td>
+       <td class="rate">11 / 26 / 28</td>
+      </tr>
+      <tr>
+       <td class="level">Hard</td>
+       <td class="rate">20 / 30 / 30</td>
+       <td class="rate">13 / 28 / 30</td>
+       <td class="rate">14 / 29 / 30</td>
+       <td class="rate">9 / 28 / 30</td>
+       <td class="rate">7 / 28 / 30</td>
+       <td class="rate">7 / 28 / 30</td>
+       <td class="rate">9 / 29 / 30</td>
+      </tr>
+      <tr>
+       <td class="level">Lunatic</td>
+       <td class="rate">13 / 30 / 30</td>
+       <td class="rate">4 / 25 / 30</td>
+       <td class="rate">10 / 30 / 30</td>
+       <td class="rate">7 / 16 / 30</td>
+       <td class="rate">0 / 0 / 30</td>
+       <td class="rate">8 / 29 / 30</td>
+       <td class="rate">5 / 28 / 30</td>
+      </tr>
+      <tr>
+       <td class="level">Extra</td>
+       <td class="rate">7 / 12 / 12</td>
+       <td class="rate">4 / 12 / 12</td>
+       <td class="rate">5 / 12 / 12</td>
+       <td class="rate">5 / 12 / 12</td>
+       <td class="rate">3 / 12 / 12</td>
+       <td class="rate">2 / 12 / 12</td>
+       <td class="rate">3 / 12 / 12</td>
+      </tr>
+      <tr>
+       <td class="level">Phantasm</td>
+       <td class="rate">10 / 13 / 13</td>
+       <td class="rate">3 / 13 / 13</td>
+       <td class="rate">10 / 13 / 13</td>
+       <td class="rate">6 / 13 / 13</td>
+       <td class="rate">7 / 13 / 13</td>
+       <td class="rate">4 / 13 / 13</td>
+       <td class="rate">4 / 13 / 13</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td>Total</td>
+       <td class="rate">101 / 141 / 141</td>
+       <td class="rate">51 / 130 / 141</td>
+       <td class="rate">83 / 137 / 141</td>
+       <td class="rate">60 / 122 / 141</td>
+       <td class="rate">45 / 105 / 141</td>
+       <td class="rate">48 / 135 / 141</td>
+       <td class="rate">46 / 134 / 141</td>
+      </tr>
+     </tfoot>
+    </table>
+
+    <table class="rate_per_stage">
+     <caption id="rate_per_stage">ステージ別スペルカード蒐集率 （取得回数 / 遭遇回数 / 総数）</caption>
+     <thead>
+      <tr>
+       <th class="stage">ステージ</th>
+       <th class="character">全主人公合計</th>
+       <th class="character">博麗 霊夢（霊）</th>
+       <th class="character">博麗 霊夢（夢）</th>
+       <th class="character">霧雨 魔理沙（魔）</th>
+       <th class="character">霧雨 魔理沙（恋）</th>
+       <th class="character">十六夜 咲夜（幻）</th>
+       <th class="character">十六夜 咲夜（時）</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="stage">Stage 1</td>
+       <td class="rate">10 / 10 / 10</td>
+       <td class="rate">10 / 10 / 10</td>
+       <td class="rate">10 / 10 / 10</td>
+       <td class="rate">9 / 10 / 10</td>
+       <td class="rate">7 / 7 / 10</td>
+       <td class="rate">10 / 10 / 10</td>
+       <td class="rate">9 / 10 / 10</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 2</td>
+       <td class="rate">15 / 16 / 16</td>
+       <td class="rate">13 / 16 / 16</td>
+       <td class="rate">13 / 16 / 16</td>
+       <td class="rate">12 / 16 / 16</td>
+       <td class="rate">9 / 12 / 16</td>
+       <td class="rate">10 / 16 / 16</td>
+       <td class="rate">10 / 16 / 16</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 3</td>
+       <td class="rate">16 / 18 / 18</td>
+       <td class="rate">9 / 18 / 18</td>
+       <td class="rate">13 / 18 / 18</td>
+       <td class="rate">11 / 18 / 18</td>
+       <td class="rate">8 / 13 / 18</td>
+       <td class="rate">8 / 18 / 18</td>
+       <td class="rate">7 / 18 / 18</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 4</td>
+       <td class="rate">17 / 24 / 24</td>
+       <td class="rate">5 / 16 / 24</td>
+       <td class="rate">11 / 20 / 24</td>
+       <td class="rate">8 / 17 / 24</td>
+       <td class="rate">5 / 12 / 24</td>
+       <td class="rate">6 / 18 / 24</td>
+       <td class="rate">8 / 17 / 24</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 5</td>
+       <td class="rate">11 / 20 / 20</td>
+       <td class="rate">4 / 20 / 20</td>
+       <td class="rate">7 / 20 / 20</td>
+       <td class="rate">4 / 15 / 20</td>
+       <td class="rate">4 / 15 / 20</td>
+       <td class="rate">2 / 20 / 20</td>
+       <td class="rate">2 / 20 / 20</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 6</td>
+       <td class="rate">15 / 28 / 28</td>
+       <td class="rate">3 / 25 / 28</td>
+       <td class="rate">14 / 28 / 28</td>
+       <td class="rate">5 / 21 / 28</td>
+       <td class="rate">2 / 21 / 28</td>
+       <td class="rate">6 / 28 / 28</td>
+       <td class="rate">3 / 28 / 28</td>
+      </tr>
+      <tr>
+       <td class="stage">Extra</td>
+       <td class="rate">7 / 12 / 12</td>
+       <td class="rate">4 / 12 / 12</td>
+       <td class="rate">5 / 12 / 12</td>
+       <td class="rate">5 / 12 / 12</td>
+       <td class="rate">3 / 12 / 12</td>
+       <td class="rate">2 / 12 / 12</td>
+       <td class="rate">3 / 12 / 12</td>
+      </tr>
+      <tr>
+       <td class="stage">Phantasm</td>
+       <td class="rate">10 / 13 / 13</td>
+       <td class="rate">3 / 13 / 13</td>
+       <td class="rate">10 / 13 / 13</td>
+       <td class="rate">6 / 13 / 13</td>
+       <td class="rate">7 / 13 / 13</td>
+       <td class="rate">4 / 13 / 13</td>
+       <td class="rate">4 / 13 / 13</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td>Total</td>
+       <td class="rate">101 / 141 / 141</td>
+       <td class="rate">51 / 130 / 141</td>
+       <td class="rate">83 / 137 / 141</td>
+       <td class="rate">60 / 122 / 141</td>
+       <td class="rate">45 / 105 / 141</td>
+       <td class="rate">48 / 135 / 141</td>
+       <td class="rate">46 / 134 / 141</td>
+      </tr>
+     </tfoot>
+    </table>
+
+   </section>
+
+  </main>
+
+  <footer>
    <p>
-    <a href="th07score1.html">スコアデータ全般</a> /
-    <a href="th07score2.html">個別ランキング</a> /
-    <a href="th07score3.html">プラクティス</a> /
-    御札戦歴<br />
-    <a href="#rate_per_card">スペルカード別</a> /
-    <a href="#rate_per_level">難易度別</a> /
-    <a href="#rate_per_stage">ステージ別</a>
-   </p>
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <h2 id="Card">御札戦歴</h2>
-
-   <table class="rate_per_card">
-    <caption id="rate_per_card">スペルカード別取得率 （上段： MaxBonus、下段： 取得回数 / 遭遇回数）</caption>
-    <thead>
-     <tr>
-      <td class="number">No.</td>
-      <td class="card">スペルカード名<br />（難易度）</td>
-      <td class="character">全主人公合計</td>
-      <td class="character">博麗 霊夢（霊）</td>
-      <td class="character">博麗 霊夢（夢）</td>
-      <td class="character">霧雨 魔理沙（魔）</td>
-      <td class="character">霧雨 魔理沙（恋）</td>
-      <td class="character">十六夜 咲夜（幻）</td>
-      <td class="character">十六夜 咲夜（時）</td>
-     </tr>
-    </thead>
-    <tfoot>
-     <tr>
-      <td colspan="2">Total</td>
-      <td class="rate">338,474,060<br />938 / 3,751</td>
-      <td class="rate">130,240,930<br />107 / 441</td>
-      <td class="rate">267,070,740<br />458 / 2,071</td>
-      <td class="rate">169,115,060<br />152 / 435</td>
-      <td class="rate">119,333,820<br />74 / 213</td>
-      <td class="rate">132,946,670<br />84 / 311</td>
-      <td class="rate">137,559,240<br />63 / 280</td>
-     </tr>
-    </tfoot>
-
-    <tbody>
-     <tr>
-      <td class="number">No.01</td>
-      <td class="card">霜符「フロストコラムス」<br />(Hard)</td>
-      <td class="rate">1,417,240<br />16 / 17</td>
-      <td class="rate">1,302,370<br />4 / 4</td>
-      <td class="rate">1,182,340<br />5 / 6</td>
-      <td class="rate">1,203,780<br />1 / 1</td>
-      <td class="rate">1,202,220<br />1 / 1</td>
-      <td class="rate">1,417,240<br />3 / 3</td>
-      <td class="rate">1,414,650<br />2 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.02</td>
-      <td class="card">霜符「フロストコラムス -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">1,442,280<br />21 / 26</td>
-      <td class="rate">1,442,280<br />3 / 5</td>
-      <td class="rate">1,263,520<br />7 / 8</td>
-      <td class="rate">1,421,090<br />1 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">1,283,990<br />6 / 8</td>
-      <td class="rate">1,291,850<br />4 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.03</td>
-      <td class="card">寒符「リンガリングコールド -Easy-」<br />(Easy)</td>
-      <td class="rate">1,562,070<br />19 / 21</td>
-      <td class="rate">1,420,580<br />1 / 1</td>
-      <td class="rate">1,441,430<br />9 / 9</td>
-      <td class="rate">1,562,070<br />2 / 3</td>
-      <td class="rate">1,416,850<br />4 / 5</td>
-      <td class="rate">1,515,660<br />2 / 2</td>
-      <td class="rate">1,390,350<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.04</td>
-      <td class="card">寒符「リンガリングコールド」<br />(Normal)</td>
-      <td class="rate">1,640,100<br />33 / 40</td>
-      <td class="rate">1,445,940<br />5 / 5</td>
-      <td class="rate">1,639,920<br />15 / 20</td>
-      <td class="rate">1,640,100<br />9 / 11</td>
-      <td class="rate">1,527,810<br />2 / 2</td>
-      <td class="rate">1,462,030<br />1 / 1</td>
-      <td class="rate">1,568,360<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.05</td>
-      <td class="card">寒符「リンガリングコールド -Hard-」<br />(Hard)</td>
-      <td class="rate">1,817,980<br />14 / 17</td>
-      <td class="rate">1,662,080<br />3 / 4</td>
-      <td class="rate">1,738,430<br />5 / 6</td>
-      <td class="rate">1,817,980<br />1 / 1</td>
-      <td class="rate">1,639,310<br />1 / 1</td>
-      <td class="rate">1,733,480<br />2 / 3</td>
-      <td class="rate">1,762,270<br />2 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.06</td>
-      <td class="card">寒符「リンガリングコールド -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">1,849,080<br />20 / 24</td>
-      <td class="rate">1,745,120<br />3 / 5</td>
-      <td class="rate">1,844,320<br />7 / 7</td>
-      <td class="rate">1,849,080<br />1 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">1,771,740<br />7 / 7</td>
-      <td class="rate">1,775,940<br />2 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.07</td>
-      <td class="card">冬符「フラワーウィザラウェイ -Easy-」<br />(Easy)</td>
-      <td class="rate">1,649,420<br />18 / 21</td>
-      <td class="rate">1,479,460<br />1 / 1</td>
-      <td class="rate">1,622,740<br />7 / 9</td>
-      <td class="rate">1,649,420<br />3 / 3</td>
-      <td class="rate">1,631,240<br />5 / 5</td>
-      <td class="rate">1,551,790<br />1 / 2</td>
-      <td class="rate">1,441,940<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.08</td>
-      <td class="card">冬符「フラワーウィザラウェイ」<br />(Normal)</td>
-      <td class="rate">1,670,080<br />35 / 40</td>
-      <td class="rate">1,486,420<br />4 / 5</td>
-      <td class="rate">1,659,960<br />17 / 20</td>
-      <td class="rate">1,670,080<br />10 / 11</td>
-      <td class="rate">1,361,260<br />2 / 2</td>
-      <td class="rate">1,515,740<br />1 / 1</td>
-      <td class="rate">1,561,540<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.09</td>
-      <td class="card">白符「アンデュレイションレイ」<br />(Hard)</td>
-      <td class="rate">1,788,510<br />11 / 17</td>
-      <td class="rate">1,567,770<br />2 / 4</td>
-      <td class="rate">1,788,510<br />6 / 6</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">1,680,640<br />1 / 1</td>
-      <td class="rate">1,719,780<br />1 / 3</td>
-      <td class="rate">1,706,190<br />1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.10</td>
-      <td class="card">怪符「テーブルターニング」<br />(Lunatic)</td>
-      <td class="rate">1,864,870<br />9 / 22</td>
-      <td class="rate">1,674,380<br />2 / 5</td>
-      <td class="rate">1,846,520<br />1 / 7</td>
-      <td class="rate">1,864,870<br />1 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">1,788,870<br />5 / 7</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.11</td>
-      <td class="card">仙符「鳳凰卵 -Easy-」<br />(Easy)</td>
-      <td class="rate">1,677,870<br />18 / 21</td>
-      <td class="rate">1,332,140<br />1 / 1</td>
-      <td class="rate">1,579,960<br />7 / 9</td>
-      <td class="rate">1,663,100<br />3 / 3</td>
-      <td class="rate">1,677,870<br />5 / 5</td>
-      <td class="rate">967,660<br />1 / 2</td>
-      <td class="rate">1,503,410<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.12</td>
-      <td class="card">仙符「鳳凰卵」<br />(Normal)</td>
-      <td class="rate">1,769,140<br />33 / 37</td>
-      <td class="rate">1,466,460<br />4 / 4</td>
-      <td class="rate">1,742,940<br />16 / 19</td>
-      <td class="rate">1,769,140<br />9 / 10</td>
-      <td class="rate">1,686,420<br />2 / 2</td>
-      <td class="rate">1,493,190<br />1 / 1</td>
-      <td class="rate">1,616,300<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.13</td>
-      <td class="card">仙符「鳳凰展翅」<br />(Hard)</td>
-      <td class="rate">1,775,800<br />9 / 18</td>
-      <td class="rate">1,493,930<br />2 / 6</td>
-      <td class="rate">1,771,070<br />4 / 6</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">1,775,800<br />1 / 1</td>
-      <td class="rate">1,535,630<br />1 / 2</td>
-      <td class="rate">1,744,460<br />1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.14</td>
-      <td class="card">仙符「鳳凰展翅 -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">1,860,620<br />7 / 40</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">1,860,620<br />7 / 27</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 7</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.15</td>
-      <td class="card">式符「飛翔晴明 -Easy-」<br />(Easy)</td>
-      <td class="rate">1,902,240<br />13 / 21</td>
-      <td class="rate">1,750,760<br />1 / 1</td>
-      <td class="rate">1,782,120<br />4 / 9</td>
-      <td class="rate">1,902,240<br />2 / 3</td>
-      <td class="rate">1,862,850<br />4 / 5</td>
-      <td class="rate">1,731,600<br />1 / 2</td>
-      <td class="rate">1,828,810<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.16</td>
-      <td class="card">式符「飛翔晴明」<br />(Normal)</td>
-      <td class="rate">2,018,900<br />31 / 37</td>
-      <td class="rate">1,813,910<br />4 / 4</td>
-      <td class="rate">1,974,260<br />18 / 19</td>
-      <td class="rate">2,018,900<br />5 / 10</td>
-      <td class="rate">1,883,820<br />2 / 2</td>
-      <td class="rate">1,805,060<br />1 / 1</td>
-      <td class="rate">1,852,880<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.17</td>
-      <td class="card">陰陽「道満晴明」<br />(Hard)</td>
-      <td class="rate">2,080,330<br />2 / 18</td>
-      <td class="rate">1,887,890<br />1 / 6</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">2,080,330<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.18</td>
-      <td class="card">陰陽「晴明大紋」<br />(Lunatic)</td>
-      <td class="rate">2,009,920<br />1 / 40</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">2,009,920<br />1 / 27</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 7</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.19</td>
-      <td class="card">天符「天仙鳴動 -Easy-」<br />(Easy)</td>
-      <td class="rate">1,680,730<br />8 / 20</td>
-      <td class="rate">1,680,730<br />1 / 1</td>
-      <td class="rate">1,294,740<br />2 / 9</td>
-      <td class="rate">1,655,290<br />2 / 3</td>
-      <td class="rate">1,278,780<br />1 / 4</td>
-      <td class="rate">1,528,020<br />1 / 2</td>
-      <td class="rate">1,337,490<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.20</td>
-      <td class="card">天符「天仙鳴動」<br />(Normal)</td>
-      <td class="rate">1,802,870<br />14 / 37</td>
-      <td class="rate">1,755,630<br />3 / 4</td>
-      <td class="rate">1,667,910<br />2 / 19</td>
-      <td class="rate">1,802,870<br />8 / 10</td>
-      <td class="rate">1,723,000<br />1 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.21</td>
-      <td class="card">翔符「飛翔韋駄天」<br />(Hard)</td>
-      <td class="rate">1,889,350<br />8 / 16</td>
-      <td class="rate">1,794,780<br />2 / 5</td>
-      <td class="rate">1,743,220<br />3 / 6</td>
-      <td class="rate">1,889,350<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">1,809,230<br />1 / 1</td>
-      <td class="rate">1,718,280<br />1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.22</td>
-      <td class="card">童符「護法天童乱舞」<br />(Lunatic)</td>
-      <td class="rate">2,041,020<br />18 / 38</td>
-      <td class="rate">1,789,300<br />1 / 3</td>
-      <td class="rate">1,885,810<br />10 / 26</td>
-      <td class="rate">1,913,690<br />1 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">2,041,020<br />5 / 6</td>
-      <td class="rate">1,583,640<br />1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.23</td>
-      <td class="card">仙符「屍解永遠 -Easy-」<br />(Easy)</td>
-      <td class="rate">1,801,440<br />14 / 20</td>
-      <td class="rate">1,629,970<br />1 / 1</td>
-      <td class="rate">1,727,200<br />5 / 9</td>
-      <td class="rate">1,470,670<br />2 / 3</td>
-      <td class="rate">1,607,640<br />3 / 4</td>
-      <td class="rate">1,801,440<br />2 / 2</td>
-      <td class="rate">1,682,250<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.24</td>
-      <td class="card">仙符「屍解永遠」<br />(Normal)</td>
-      <td class="rate">1,978,360<br />28 / 37</td>
-      <td class="rate">1,736,290<br />3 / 4</td>
-      <td class="rate">1,930,430<br />12 / 19</td>
-      <td class="rate">1,978,360<br />9 / 10</td>
-      <td class="rate">1,707,420<br />2 / 2</td>
-      <td class="rate">1,829,430<br />1 / 1</td>
-      <td class="rate">1,810,270<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.25</td>
-      <td class="card">鬼符「鬼門金神」<br />(Hard)</td>
-      <td class="rate">2,107,700<br />2 / 16</td>
-      <td class="rate">1,808,420<br />1 / 5</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">2,107,700<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.26</td>
-      <td class="card">方符「奇門遁甲」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 38</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 26</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.27</td>
-      <td class="card">操符「乙女文楽」<br />(Hard)</td>
-      <td class="rate">2,462,320<br />10 / 14</td>
-      <td class="rate">2,218,750<br />2 / 2</td>
-      <td class="rate">2,462,320<br />7 / 7</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">1,624,600<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.28</td>
-      <td class="card">操符「乙女文楽 -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">2,479,460<br />5 / 44</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">2,479,460<br />4 / 30</td>
-      <td class="rate">2,354,800<br />1 / 3</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.29</td>
-      <td class="card">蒼符「博愛の仏蘭西人形 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,053,370<br />14 / 18</td>
-      <td class="rate">1,768,210<br />1 / 1</td>
-      <td class="rate">1,901,330<br />6 / 9</td>
-      <td class="rate">2,053,370<br />3 / 3</td>
-      <td class="rate">1,902,340<br />2 / 2</td>
-      <td class="rate">1,683,750<br />1 / 2</td>
-      <td class="rate">1,786,460<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.30</td>
-      <td class="card">蒼符「博愛の仏蘭西人形」<br />(Normal)</td>
-      <td class="rate">2,143,350<br />23 / 37</td>
-      <td class="rate">1,808,600<br />3 / 4</td>
-      <td class="rate">2,092,330<br />10 / 19</td>
-      <td class="rate">2,143,350<br />9 / 10</td>
-      <td class="rate">1,625,260<br />1 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.31</td>
-      <td class="card">蒼符「博愛の仏蘭西人形 -Hard-」<br />(Hard)</td>
-      <td class="rate">2,174,520<br />3 / 14</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">2,019,070<br />2 / 7</td>
-      <td class="rate">2,174,520<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.32</td>
-      <td class="card">蒼符「博愛のオルレアン人形」<br />(Lunatic)</td>
-      <td class="rate">2,322,560<br />1 / 43</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 30</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">2,322,560<br />1 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.33</td>
-      <td class="card">紅符「紅毛の和蘭人形 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,120,180<br />15 / 18</td>
-      <td class="rate">1,936,400<br />1 / 1</td>
-      <td class="rate">1,976,860<br />7 / 9</td>
-      <td class="rate">2,027,800<br />2 / 3</td>
-      <td class="rate">2,061,210<br />2 / 2</td>
-      <td class="rate">2,120,180<br />2 / 2</td>
-      <td class="rate">1,816,270<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.34</td>
-      <td class="card">紅符「紅毛の和蘭人形」<br />(Normal)</td>
-      <td class="rate">2,243,990<br />30 / 37</td>
-      <td class="rate">2,148,360<br />4 / 4</td>
-      <td class="rate">2,243,990<br />14 / 19</td>
-      <td class="rate">2,231,860<br />8 / 10</td>
-      <td class="rate">2,002,170<br />2 / 2</td>
-      <td class="rate">2,182,320<br />1 / 1</td>
-      <td class="rate">1,916,550<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.35</td>
-      <td class="card">白符「白亜の露西亜人形」<br />(Hard)</td>
-      <td class="rate">2,491,560<br />2 / 14</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 7</td>
-      <td class="rate">2,484,250<br />1 / 1</td>
-      <td class="rate">2,491,560<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.36</td>
-      <td class="card">白符「白亜の露西亜人形 -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">2,475,140<br />1 / 43</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 30</td>
-      <td class="rate">2,475,140<br />1 / 3</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.37</td>
-      <td class="card">闇符「霧の倫敦人形 -Easy-」<br />(Easy)</td>
-      <td class="rate">1,698,420<br />7 / 18</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">1,698,420<br />4 / 9</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">1,677,880<br />1 / 2</td>
-      <td class="rate">1,626,060<br />2 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.38</td>
-      <td class="card">闇符「霧の倫敦人形」<br />(Normal)</td>
-      <td class="rate">2,028,180<br />11 / 37</td>
-      <td class="rate">1,680,850<br />2 / 4</td>
-      <td class="rate">1,932,060<br />5 / 19</td>
-      <td class="rate">2,028,180<br />4 / 10</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.39</td>
-      <td class="card">廻符「輪廻の西蔵人形」<br />(Hard)</td>
-      <td class="rate">2,113,030<br />2 / 13</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,113,030<br />1 / 7</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,059,270<br />1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.40</td>
-      <td class="card">雅符「春の京人形」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 41</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 28</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.41</td>
-      <td class="card">咒詛「魔彩光の上海人形 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,076,050<br />16 / 18</td>
-      <td class="rate">1,527,880<br />1 / 1</td>
-      <td class="rate">1,998,470<br />7 / 9</td>
-      <td class="rate">2,076,050<br />3 / 3</td>
-      <td class="rate">1,996,000<br />2 / 2</td>
-      <td class="rate">1,777,250<br />2 / 2</td>
-      <td class="rate">1,734,410<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.42</td>
-      <td class="card">咒詛「魔彩光の上海人形」<br />(Normal)</td>
-      <td class="rate">2,161,470<br />15 / 37</td>
-      <td class="rate">1,905,950<br />3 / 4</td>
-      <td class="rate">2,076,130<br />5 / 19</td>
-      <td class="rate">2,161,470<br />5 / 10</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">1,942,050<br />1 / 1</td>
-      <td class="rate">1,987,150<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.43</td>
-      <td class="card">咒詛「魔彩光の上海人形 -Hard-」<br />(Hard)</td>
-      <td class="rate">2,211,990<br />4 / 13</td>
-      <td class="rate">2,112,020<br />1 / 1</td>
-      <td class="rate">2,202,520<br />1 / 7</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,133,030<br />1 / 1</td>
-      <td class="rate">2,211,990<br />1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.44</td>
-      <td class="card">咒詛「首吊り蓬莱人形」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 41</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 28</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.45</td>
-      <td class="card">騒符「ファントムディニング -Easy-」<br />(Easy)</td>
-      <td class="rate">2,897,520<br />7 / 18</td>
-      <td class="rate">2,428,340<br />1 / 2</td>
-      <td class="rate">2,463,480<br />1 / 8</td>
-      <td class="rate">2,897,520<br />1 / 3</td>
-      <td class="rate">2,249,080<br />1 / 2</td>
-      <td class="rate">2,555,260<br />2 / 2</td>
-      <td class="rate">2,607,350<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.46</td>
-      <td class="card">騒符「ファントムディニング」<br />(Normal)</td>
-      <td class="rate">2,858,500<br />20 / 36</td>
-      <td class="rate">2,517,420<br />2 / 4</td>
-      <td class="rate">2,781,730<br />9 / 16</td>
-      <td class="rate">2,858,500<br />5 / 11</td>
-      <td class="rate">2,456,590<br />1 / 2</td>
-      <td class="rate">2,657,140<br />2 / 2</td>
-      <td class="rate">2,693,990<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.47</td>
-      <td class="card">騒符「ライブポルターガイスト」<br />(Hard)</td>
-      <td class="rate">3,479,890<br />2 / 20</td>
-      <td class="rate">2,946,150<br />1 / 1</td>
-      <td class="rate">3,479,890<br />1 / 14</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.48</td>
-      <td class="card">騒符「ライブポルターガイスト -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">4,124,520<br />5 / 39</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 25</td>
-      <td class="rate">4,005,140<br />2 / 4</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">4,124,520<br />3 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.49</td>
-      <td class="card">弦奏「グァルネリ・デル・ジェス -Easy-」<br />(Easy)</td>
-      <td class="rate">2,397,610<br />3 / 11</td>
-      <td class="rate">2,138,340<br />1 / 2</td>
-      <td class="rate">1,890,460<br />1 / 8</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">2,397,610<br />1 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.50</td>
-      <td class="card">弦奏「グァルネリ・デル・ジェス」<br />(Normal)</td>
-      <td class="rate">2,554,480<br />3 / 20</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">2,378,470<br />2 / 14</td>
-      <td class="rate">2,554,480<br />1 / 2</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.51</td>
-      <td class="card">神弦「ストラディヴァリウス」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.52</td>
-      <td class="card">偽弦「スードストラディヴァリウス」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.53</td>
-      <td class="card">管霊「ヒノファンタズム -Easy-」<br />(Easy)</td>
-      <td class="rate">2,537,050<br />2 / 2</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">2,537,050<br />1 / 1</td>
-      <td class="rate">2,152,120<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.54</td>
-      <td class="card">管霊「ヒノファンタズム」<br />(Normal)</td>
-      <td class="rate">2,428,120<br />1 / 3</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">2,428,120<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.55</td>
-      <td class="card">冥管「ゴーストクリフォード」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.56</td>
-      <td class="card">管霊「ゴーストクリフォード -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.57</td>
-      <td class="card">冥鍵「ファツィオーリ冥奏 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,414,010<br />1 / 5</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">2,414,010<br />1 / 2</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.58</td>
-      <td class="card">冥鍵「ファツィオーリ冥奏」<br />(Normal)</td>
-      <td class="rate">0<br />0 / 13</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.59</td>
-      <td class="card">鍵霊「ベーゼンドルファー神奏」<br />(Hard)</td>
-      <td class="rate">3,118,350<br />4 / 17</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">3,118,350<br />4 / 12</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.60</td>
-      <td class="card">鍵霊「ベーゼンドルファー神奏 -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">2,576,720<br />1 / 33</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">2,576,720<br />1 / 20</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 5</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.61</td>
-      <td class="card">合葬「プリズムコンチェルト -Easy-」<br />(Easy)</td>
-      <td class="rate">2,510,180<br />2 / 18</td>
-      <td class="rate">2,510,180<br />1 / 2</td>
-      <td class="rate">0<br />0 / 8</td>
-      <td class="rate">2,381,640<br />1 / 3</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.62</td>
-      <td class="card">合葬「プリズムコンチェルト」<br />(Normal)</td>
-      <td class="rate">2,570,940<br />4 / 34</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">2,461,010<br />1 / 15</td>
-      <td class="rate">0<br />0 / 11</td>
-      <td class="rate">2,481,750<br />1 / 2</td>
-      <td class="rate">2,464,310<br />1 / 1</td>
-      <td class="rate">2,570,940<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.63</td>
-      <td class="card">騒葬「スティジャンリバーサイド」<br />(Hard)</td>
-      <td class="rate">2,389,910<br />4 / 19</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,389,910<br />4 / 13</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.64</td>
-      <td class="card">騒葬「スティジャンリバーサイド -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 38</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 24</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.65</td>
-      <td class="card">大合葬「霊車コンチェルトグロッソ -Easy-」<br />(Easy)</td>
-      <td class="rate">2,322,120<br />8 / 18</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">2,235,760<br />4 / 8</td>
-      <td class="rate">2,319,770<br />2 / 3</td>
-      <td class="rate">2,075,720<br />1 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">2,322,120<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.66</td>
-      <td class="card">大合葬「霊車コンチェルトグロッソ」<br />(Normal)</td>
-      <td class="rate">2,723,660<br />4 / 34</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">2,414,860<br />2 / 15</td>
-      <td class="rate">2,402,400<br />1 / 11</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,723,660<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.67</td>
-      <td class="card">大合葬「霊車コンチェルトグロッソ改」<br />(Hard)</td>
-      <td class="rate">2,700,620<br />2 / 19</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 13</td>
-      <td class="rate">2,581,820<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,700,620<br />1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.68</td>
-      <td class="card">大合葬「霊車コンチェルトグロッソ怪」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 37</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 24</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.69</td>
-      <td class="card">幽鬼剣「妖童餓鬼の断食 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,844,180<br />6 / 21</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,839,380<br />4 / 12</td>
-      <td class="rate">2,789,250<br />1 / 3</td>
-      <td class="rate">2,844,180<br />1 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.70</td>
-      <td class="card">幽鬼剣「妖童餓鬼の断食」<br />(Normal)</td>
-      <td class="rate">2,948,100<br />3 / 35</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">2,948,100<br />2 / 15</td>
-      <td class="rate">0<br />0 / 12</td>
-      <td class="rate">2,943,020<br />1 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.71</td>
-      <td class="card">餓鬼剣「餓鬼道草紙」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.72</td>
-      <td class="card">餓王剣「餓鬼十王の報い」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 30</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 20</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.73</td>
-      <td class="card">獄界剣「二百由旬の一閃 -Easy-」<br />(Easy)</td>
-      <td class="rate">1,828,850<br />1 / 19</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 11</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">1,828,850<br />1 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.74</td>
-      <td class="card">獄界剣「二百由旬の一閃」<br />(Normal)</td>
-      <td class="rate">2,550,790<br />1 / 35</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">2,550,790<br />1 / 15</td>
-      <td class="rate">0<br />0 / 12</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.75</td>
-      <td class="card">獄炎剣「業風閃影陣」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.76</td>
-      <td class="card">獄神剣「業風神閃斬」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 30</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 20</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.77</td>
-      <td class="card">畜趣剣「無為無策の冥罰 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,582,130<br />14 / 17</td>
-      <td class="rate">2,428,320<br />1 / 1</td>
-      <td class="rate">2,582,130<br />7 / 10</td>
-      <td class="rate">2,536,420<br />2 / 2</td>
-      <td class="rate">2,301,050<br />2 / 2</td>
-      <td class="rate">2,097,640<br />1 / 1</td>
-      <td class="rate">2,383,100<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.78</td>
-      <td class="card">畜趣剣「無為無策の冥罰」<br />(Normal)</td>
-      <td class="rate">1,648,340<br />1 / 33</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">1,648,340<br />1 / 14</td>
-      <td class="rate">0<br />0 / 11</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.79</td>
-      <td class="card">修羅剣「現世妄執」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.80</td>
-      <td class="card">修羅剣「現世妄執 -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 30</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 20</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.81</td>
-      <td class="card">人界剣「悟入幻想 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,414,110<br />5 / 16</td>
-      <td class="rate">2,356,490<br />1 / 1</td>
-      <td class="rate">2,411,760<br />2 / 9</td>
-      <td class="rate">2,414,110<br />1 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,274,300<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.82</td>
-      <td class="card">人界剣「悟入幻想」<br />(Normal)</td>
-      <td class="rate">2,618,910<br />2 / 32</td>
-      <td class="rate">2,500,050<br />1 / 4</td>
-      <td class="rate">0<br />0 / 13</td>
-      <td class="rate">0<br />0 / 11</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">2,618,910<br />1 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.83</td>
-      <td class="card">人世剣「大悟顕晦」<br />(Hard)</td>
-      <td class="rate">2,512,650<br />1 / 15</td>
-      <td class="rate">2,512,650<br />1 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.84</td>
-      <td class="card">人神剣「俗諦常住」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 30</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 20</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.85</td>
-      <td class="card">天上剣「天人の五衰 -Easy-」<br />(Easy)</td>
-      <td class="rate">2,788,820<br />1 / 16</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">2,788,820<br />1 / 9</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.86</td>
-      <td class="card">天上剣「天人の五衰」<br />(Normal)</td>
-      <td class="rate">2,949,830<br />2 / 32</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 13</td>
-      <td class="rate">2,949,830<br />2 / 11</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.87</td>
-      <td class="card">天界剣「七魄忌諱」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.88</td>
-      <td class="card">天神剣「三魂七魄」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 29</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 19</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.89</td>
-      <td class="card">六道剣「一念無量劫 -Easy-」<br />(Easy)</td>
-      <td class="rate">3,755,620<br />8 / 23</td>
-      <td class="rate">2,649,960<br />1 / 3</td>
-      <td class="rate">3,755,620<br />4 / 12</td>
-      <td class="rate">3,261,800<br />1 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">3,541,560<br />2 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.90</td>
-      <td class="card">六道剣「一念無量劫」<br />(Normal)</td>
-      <td class="rate">3,786,720<br />3 / 32</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">3,759,320<br />2 / 14</td>
-      <td class="rate">3,786,720<br />1 / 9</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.91</td>
-      <td class="card">六道剣「一念無量劫 -Hard-」<br />(Hard)</td>
-      <td class="rate">3,894,680<br />1 / 15</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">3,894,680<br />1 / 10</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.92</td>
-      <td class="card">六道剣「一念無量劫 -Lunatic-」<br />(Lunatic)</td>
-      <td class="rate">3,993,890<br />62 / 70</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">3,993,890<br />58 / 60</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">3,796,100<br />1 / 6</td>
-      <td class="rate">3,991,060<br />3 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.93</td>
-      <td class="card">亡郷「亡我郷 -さまよえる魂-」<br />(Easy)</td>
-      <td class="rate">4,047,320<br />3 / 23</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">4,047,320<br />2 / 12</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">3,691,760<br />1 / 2</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.94</td>
-      <td class="card">亡郷「亡我郷 -宿罪-」<br />(Normal)</td>
-      <td class="rate">3,160,250<br />1 / 31</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">3,160,250<br />1 / 13</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.95</td>
-      <td class="card">亡郷「亡我郷 -道無き道-」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 10</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.96</td>
-      <td class="card">亡郷「亡我郷 -自尽-」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 68</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 59</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 5</td>
-      <td class="rate">0<br />0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.97</td>
-      <td class="card">亡舞「生者必滅の理 -眩惑-」<br />(Easy)</td>
-      <td class="rate">0<br />0 / 23</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 12</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.98</td>
-      <td class="card">亡舞「生者必滅の理 -死蝶-」<br />(Normal)</td>
-      <td class="rate">0<br />0 / 29</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 12</td>
-      <td class="rate">0<br />0 / 8</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.99</td>
-      <td class="card">亡舞「生者必滅の理 -毒蛾-」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 10</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.100</td>
-      <td class="card">亡舞「生者必滅の理 -魔境-」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 67</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 58</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 5</td>
-      <td class="rate">0<br />0 / 3</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.101</td>
-      <td class="card">華霊「ゴーストバタフライ」<br />(Easy)</td>
-      <td class="rate">3,476,420<br />6 / 20</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">3,384,090<br />2 / 10</td>
-      <td class="rate">3,476,420<br />2 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">3,224,130<br />2 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.102</td>
-      <td class="card">華霊「スワローテイルバタフライ」<br />(Normal)</td>
-      <td class="rate">0<br />0 / 26</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 11</td>
-      <td class="rate">0<br />0 / 7</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.103</td>
-      <td class="card">華霊「ディープルーティドバタフライ」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 14</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.104</td>
-      <td class="card">華霊「バタフライディルージョン」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 63</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 54</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 5</td>
-      <td class="rate">0<br />0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.105</td>
-      <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -偽霊-」<br />(Easy)</td>
-      <td class="rate">8,646,100<br />2 / 19</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">8,646,100<br />1 / 10</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">5,957,170<br />1 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.106</td>
-      <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -亡霊-」<br />(Normal)</td>
-      <td class="rate">9,439,010<br />3 / 21</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">9,439,010<br />2 / 10</td>
-      <td class="rate">6,662,200<br />1 / 5</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.107</td>
-      <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -幻霊-」<br />(Hard)</td>
-      <td class="rate">12,689,500<br />9 / 14</td>
-      <td class="rate">7,362,000<br />1 / 1</td>
-      <td class="rate">12,689,500<br />4 / 9</td>
-      <td class="rate">8,421,860<br />1 / 1</td>
-      <td class="rate">10,021,420<br />1 / 1</td>
-      <td class="rate">8,417,600<br />1 / 1</td>
-      <td class="rate">11,469,660<br />1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.108</td>
-      <td class="card">幽曲「リポジトリ・オブ・ヒロカワ -神霊-」<br />(Lunatic)</td>
-      <td class="rate">17,060,700<br />38 / 60</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">17,060,700<br />32 / 52</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">11,154,900<br />4 / 5</td>
-      <td class="rate">16,295,380<br />2 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.109</td>
-      <td class="card">桜符「完全なる墨染の桜 -封印-」<br />(Easy)</td>
-      <td class="rate">3,116,160<br />1 / 19</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">3,116,160<br />1 / 10</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.110</td>
-      <td class="card">桜符「完全なる墨染の桜 -亡我-」<br />(Normal)</td>
-      <td class="rate">0<br />0 / 20</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 10</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.111</td>
-      <td class="card">桜符「完全なる墨染の桜 -春眠-」<br />(Hard)</td>
-      <td class="rate">0<br />0 / 14</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.112</td>
-      <td class="card">桜符「完全なる墨染の桜 -開花-」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 57</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 49</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 5</td>
-      <td class="rate">0<br />0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.113</td>
-      <td class="card">「反魂蝶 -一分咲-」<br />(Easy)</td>
-      <td class="rate">5,528,940<br />2 / 14</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">5,528,940<br />2 / 8</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.114</td>
-      <td class="card">「反魂蝶 -参分咲-」<br />(Normal)</td>
-      <td class="rate">5,266,200<br />1 / 17</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">5,266,200<br />1 / 7</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.115</td>
-      <td class="card">「反魂蝶 -伍分咲-」<br />(Hard)</td>
-      <td class="rate">6,996,200<br />1 / 14</td>
-      <td class="rate">6,996,200<br />1 / 1</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.116</td>
-      <td class="card">「反魂蝶 -八分咲-」<br />(Lunatic)</td>
-      <td class="rate">0<br />0 / 54</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 48</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 0</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.117</td>
-      <td class="card">鬼符「青鬼赤鬼」<br />(Extra)</td>
-      <td class="rate">5,068,180<br />4 / 51</td>
-      <td class="rate">4,469,760<br />2 / 28</td>
-      <td class="rate">4,698,130<br />1 / 10</td>
-      <td class="rate">5,068,180<br />1 / 3</td>
-      <td class="rate">0<br />0 / 5</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.118</td>
-      <td class="card">鬼神「飛翔毘沙門天」<br />(Extra)</td>
-      <td class="rate">4,574,870<br />2 / 48</td>
-      <td class="rate">0<br />0 / 27</td>
-      <td class="rate">0<br />0 / 9</td>
-      <td class="rate">4,574,870<br />2 / 3</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.119</td>
-      <td class="card">式神「仙狐思念」<br />(Extra)</td>
-      <td class="rate">5,898,020<br />22 / 43</td>
-      <td class="rate">5,898,020<br />15 / 23</td>
-      <td class="rate">5,475,410<br />4 / 9</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">5,810,640<br />3 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.120</td>
-      <td class="card">式神「十二神将の宴」<br />(Extra)</td>
-      <td class="rate">0<br />0 / 41</td>
-      <td class="rate">0<br />0 / 22</td>
-      <td class="rate">0<br />0 / 8</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 4</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.121</td>
-      <td class="card">式輝「狐狸妖怪レーザー」<br />(Extra)</td>
-      <td class="rate">6,774,210<br />10 / 38</td>
-      <td class="rate">6,774,210<br />2 / 20</td>
-      <td class="rate">4,750,630<br />1 / 8</td>
-      <td class="rate">4,873,150<br />3 / 3</td>
-      <td class="rate">4,530,430<br />2 / 2</td>
-      <td class="rate">4,295,560<br />1 / 1</td>
-      <td class="rate">5,695,980<br />1 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.122</td>
-      <td class="card">式輝「四面楚歌チャーミング」<br />(Extra)</td>
-      <td class="rate">5,027,280<br />1 / 34</td>
-      <td class="rate">0<br />0 / 16</td>
-      <td class="rate">0<br />0 / 8</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">5,027,280<br />1 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.123</td>
-      <td class="card">式輝「プリンセス天狐 -Illusion-」<br />(Extra)</td>
-      <td class="rate">5,215,750<br />5 / 28</td>
-      <td class="rate">4,660,100<br />1 / 11</td>
-      <td class="rate">5,215,750<br />2 / 7</td>
-      <td class="rate">5,154,130<br />1 / 3</td>
-      <td class="rate">4,700,890<br />1 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.124</td>
-      <td class="card">式弾「アルティメットブディスト」<br />(Extra)</td>
-      <td class="rate">4,751,210<br />9 / 22</td>
-      <td class="rate">0<br />0 / 7</td>
-      <td class="rate">4,751,210<br />6 / 7</td>
-      <td class="rate">4,325,890<br />1 / 2</td>
-      <td class="rate">3,535,040<br />1 / 2</td>
-      <td class="rate">3,249,830<br />1 / 1</td>
-      <td class="rate">0<br />0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.125</td>
-      <td class="card">式弾「ユーニラタルコンタクト」<br />(Extra)</td>
-      <td class="rate">0<br />0 / 16</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 7</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.126</td>
-      <td class="card">式神「橙」<br />(Extra)</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 6</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.127</td>
-      <td class="card">「狐狗狸さんの契約」<br />(Extra)</td>
-      <td class="rate">0<br />0 / 11</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.128</td>
-      <td class="card">幻神「飯綱権現降臨」<br />(Extra)</td>
-      <td class="rate">0<br />0 / 11</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.129</td>
-      <td class="card">式神「前鬼後鬼の守護」<br />(Phantasm)</td>
-      <td class="rate">5,710,860<br />10 / 48</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">5,432,220<br />5 / 28</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">4,993,500<br />1 / 6</td>
-      <td class="rate">5,710,860<br />1 / 1</td>
-      <td class="rate">4,696,480<br />3 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.130</td>
-      <td class="card">式神「憑依荼吉尼天」<br />(Phantasm)</td>
-      <td class="rate">5,388,230<br />23 / 47</td>
-      <td class="rate">4,946,650<br />1 / 4</td>
-      <td class="rate">4,915,890<br />14 / 27</td>
-      <td class="rate">4,889,730<br />2 / 2</td>
-      <td class="rate">4,858,760<br />2 / 6</td>
-      <td class="rate">4,805,210<br />1 / 1</td>
-      <td class="rate">5,388,230<br />3 / 7</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.131</td>
-      <td class="card">結界「夢と現の呪」<br />(Phantasm)</td>
-      <td class="rate">0<br />0 / 44</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 27</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.132</td>
-      <td class="card">結界「動と静の均衡」<br />(Phantasm)</td>
-      <td class="rate">5,387,700<br />7 / 40</td>
-      <td class="rate">4,756,590<br />1 / 2</td>
-      <td class="rate">2,460,910<br />1 / 26</td>
-      <td class="rate">3,589,110<br />1 / 2</td>
-      <td class="rate">4,387,400<br />3 / 3</td>
-      <td class="rate">5,387,700<br />1 / 1</td>
-      <td class="rate">0<br />0 / 6</td>
-     </tr>
-     <tr>
-      <td class="number">No.133</td>
-      <td class="card">結界「光と闇の網目」<br />(Phantasm)</td>
-      <td class="rate">7,301,770<br />1 / 36</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">7,301,770<br />1 / 22</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 3</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 6</td>
-     </tr>
-     <tr>
-      <td class="number">No.134</td>
-      <td class="card">罔両「ストレートとカーブの夢郷」<br />(Phantasm)</td>
-      <td class="rate">5,261,560<br />2 / 32</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">5,261,560<br />1 / 19</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">5,150,490<br />1 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 6</td>
-     </tr>
-     <tr>
-      <td class="number">No.135</td>
-      <td class="card">罔両「八雲紫の神隠し」<br />(Phantasm)</td>
-      <td class="rate">5,863,440<br />9 / 32</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">5,863,440<br />6 / 19</td>
-      <td class="rate">5,812,350<br />2 / 2</td>
-      <td class="rate">5,471,460<br />1 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 6</td>
-     </tr>
-     <tr>
-      <td class="number">No.136</td>
-      <td class="card">罔両「禅寺に棲む妖蝶」<br />(Phantasm)</td>
-      <td class="rate">5,946,330<br />18 / 30</td>
-      <td class="rate">5,115,870<br />1 / 2</td>
-      <td class="rate">5,686,220<br />11 / 18</td>
-      <td class="rate">5,946,330<br />1 / 2</td>
-      <td class="rate">5,354,470<br />1 / 2</td>
-      <td class="rate">3,863,810<br />1 / 1</td>
-      <td class="rate">5,277,010<br />3 / 5</td>
-     </tr>
-     <tr>
-      <td class="number">No.137</td>
-      <td class="card">魍魎「二重黒死蝶」<br />(Phantasm)</td>
-      <td class="rate">0<br />0 / 28</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 16</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 5</td>
-     </tr>
-     <tr>
-      <td class="number">No.138</td>
-      <td class="card">式神「八雲藍」<br />(Phantasm)</td>
-      <td class="rate">5,440,540<br />2 / 26</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">5,440,540<br />1 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">4,948,220<br />1 / 5</td>
-     </tr>
-     <tr>
-      <td class="number">No.139</td>
-      <td class="card">「人間と妖怪の境界」<br />(Phantasm)</td>
-      <td class="rate">0<br />0 / 24</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 15</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.140</td>
-      <td class="card">結界「生と死の境界」<br />(Phantasm)</td>
-      <td class="rate">5,361,980<br />1 / 18</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">5,361,980<br />1 / 10</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 2</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.141</td>
-      <td class="card">紫奥義「弾幕結界」<br />(Phantasm)</td>
-      <td class="rate">0<br />0 / 10</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 4</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 1</td>
-      <td class="rate">0<br />0 / 2</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="rate_per_level">
-    <caption id="rate_per_level">難易度別スペルカード蒐集率 （取得回数 / 遭遇回数 / 総数）</caption>
-    <thead>
-     <tr>
-      <td class="level">難易度</td>
-      <td class="character">全主人公合計</td>
-      <td class="character">博麗 霊夢（霊）</td>
-      <td class="character">博麗 霊夢（夢）</td>
-      <td class="character">霧雨 魔理沙（魔）</td>
-      <td class="character">霧雨 魔理沙（恋）</td>
-      <td class="character">十六夜 咲夜（幻）</td>
-      <td class="character">十六夜 咲夜（時）</td>
-     </tr>
-    </thead>
-    <tfoot>
-     <tr>
-      <td>Total</td>
-      <td class="rate">100 / 141 / 141</td>
-      <td class="rate">51 / 130 / 141</td>
-      <td class="rate">81 / 137 / 141</td>
-      <td class="rate">59 / 122 / 141</td>
-      <td class="rate">44 / 105 / 141</td>
-      <td class="rate">48 / 135 / 141</td>
-      <td class="rate">46 / 134 / 141</td>
-     </tr>
-    </tfoot>
-    <tbody>
-     <tr>
-      <td class="level">Easy</td>
-      <td class="rate">27 / 28 / 28</td>
-      <td class="rate">15 / 26 / 28</td>
-      <td class="rate">23 / 26 / 28</td>
-      <td class="rate">17 / 26 / 28</td>
-      <td class="rate">17 / 26 / 28</td>
-      <td class="rate">17 / 27 / 28</td>
-      <td class="rate">14 / 26 / 28</td>
-     </tr>
-     <tr>
-      <td class="level">Normal</td>
-      <td class="rate">24 / 28 / 28</td>
-      <td class="rate">12 / 26 / 28</td>
-      <td class="rate">21 / 27 / 28</td>
-      <td class="rate">16 / 27 / 28</td>
-      <td class="rate">11 / 26 / 28</td>
-      <td class="rate">10 / 26 / 28</td>
-      <td class="rate">11 / 26 / 28</td>
-     </tr>
-     <tr>
-      <td class="level">Hard</td>
-      <td class="rate">20 / 30 / 30</td>
-      <td class="rate">13 / 28 / 30</td>
-      <td class="rate">14 / 29 / 30</td>
-      <td class="rate">9 / 28 / 30</td>
-      <td class="rate">7 / 28 / 30</td>
-      <td class="rate">7 / 28 / 30</td>
-      <td class="rate">9 / 29 / 30</td>
-     </tr>
-     <tr>
-      <td class="level">Lunatic</td>
-      <td class="rate">13 / 30 / 30</td>
-      <td class="rate">4 / 25 / 30</td>
-      <td class="rate">10 / 30 / 30</td>
-      <td class="rate">7 / 16 / 30</td>
-      <td class="rate">0 / 0 / 30</td>
-      <td class="rate">8 / 29 / 30</td>
-      <td class="rate">5 / 28 / 30</td>
-     </tr>
-     <tr>
-      <td class="level">Extra</td>
-      <td class="rate">7 / 12 / 12</td>
-      <td class="rate">4 / 12 / 12</td>
-      <td class="rate">5 / 12 / 12</td>
-      <td class="rate">5 / 12 / 12</td>
-      <td class="rate">3 / 12 / 12</td>
-      <td class="rate">2 / 12 / 12</td>
-      <td class="rate">3 / 12 / 12</td>
-     </tr>
-     <tr>
-      <td class="level">Phantasm</td>
-      <td class="rate">9 / 13 / 13</td>
-      <td class="rate">3 / 13 / 13</td>
-      <td class="rate">8 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-      <td class="rate">6 / 13 / 13</td>
-      <td class="rate">4 / 13 / 13</td>
-      <td class="rate">4 / 13 / 13</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="rate_per_stage">
-    <caption id="rate_per_stage">ステージ別スペルカード蒐集率 （取得回数 / 遭遇回数 / 総数）</caption>
-    <thead>
-     <tr>
-      <td class="stage">ステージ</td>
-      <td class="character">全主人公合計</td>
-      <td class="character">博麗 霊夢（霊）</td>
-      <td class="character">博麗 霊夢（夢）</td>
-      <td class="character">霧雨 魔理沙（魔）</td>
-      <td class="character">霧雨 魔理沙（恋）</td>
-      <td class="character">十六夜 咲夜（幻）</td>
-      <td class="character">十六夜 咲夜（時）</td>
-     </tr>
-    </thead>
-    <tfoot>
-     <tr>
-      <td>Total</td>
-      <td class="rate">100 / 141 / 141</td>
-      <td class="rate">51 / 130 / 141</td>
-      <td class="rate">81 / 137 / 141</td>
-      <td class="rate">59 / 122 / 141</td>
-      <td class="rate">44 / 105 / 141</td>
-      <td class="rate">48 / 135 / 141</td>
-      <td class="rate">46 / 134 / 141</td>
-     </tr>
-    </tfoot>
-    <tbody>
-     <tr>
-      <td class="stage">Stage1</td>
-      <td class="rate">10 / 10 / 10</td>
-      <td class="rate">10 / 10 / 10</td>
-      <td class="rate">10 / 10 / 10</td>
-      <td class="rate">9 / 10 / 10</td>
-      <td class="rate">7 / 7 / 10</td>
-      <td class="rate">10 / 10 / 10</td>
-      <td class="rate">9 / 10 / 10</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage2</td>
-      <td class="rate">15 / 16 / 16</td>
-      <td class="rate">13 / 16 / 16</td>
-      <td class="rate">13 / 16 / 16</td>
-      <td class="rate">12 / 16 / 16</td>
-      <td class="rate">9 / 12 / 16</td>
-      <td class="rate">10 / 16 / 16</td>
-      <td class="rate">10 / 16 / 16</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage3</td>
-      <td class="rate">16 / 18 / 18</td>
-      <td class="rate">9 / 18 / 18</td>
-      <td class="rate">13 / 18 / 18</td>
-      <td class="rate">11 / 18 / 18</td>
-      <td class="rate">8 / 13 / 18</td>
-      <td class="rate">8 / 18 / 18</td>
-      <td class="rate">7 / 18 / 18</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage4</td>
-      <td class="rate">17 / 24 / 24</td>
-      <td class="rate">5 / 16 / 24</td>
-      <td class="rate">11 / 20 / 24</td>
-      <td class="rate">8 / 17 / 24</td>
-      <td class="rate">5 / 12 / 24</td>
-      <td class="rate">6 / 18 / 24</td>
-      <td class="rate">8 / 17 / 24</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage5</td>
-      <td class="rate">11 / 20 / 20</td>
-      <td class="rate">4 / 20 / 20</td>
-      <td class="rate">7 / 20 / 20</td>
-      <td class="rate">4 / 15 / 20</td>
-      <td class="rate">4 / 15 / 20</td>
-      <td class="rate">2 / 20 / 20</td>
-      <td class="rate">2 / 20 / 20</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage6</td>
-      <td class="rate">15 / 28 / 28</td>
-      <td class="rate">3 / 25 / 28</td>
-      <td class="rate">14 / 28 / 28</td>
-      <td class="rate">5 / 21 / 28</td>
-      <td class="rate">2 / 21 / 28</td>
-      <td class="rate">6 / 28 / 28</td>
-      <td class="rate">3 / 28 / 28</td>
-     </tr>
-     <tr>
-      <td class="stage">Extra</td>
-      <td class="rate">7 / 12 / 12</td>
-      <td class="rate">4 / 12 / 12</td>
-      <td class="rate">5 / 12 / 12</td>
-      <td class="rate">5 / 12 / 12</td>
-      <td class="rate">3 / 12 / 12</td>
-      <td class="rate">2 / 12 / 12</td>
-      <td class="rate">3 / 12 / 12</td>
-     </tr>
-     <tr>
-      <td class="stage">Phantasm</td> 
-      <td class="rate">9 / 13 / 13</td>
-      <td class="rate">3 / 13 / 13</td>
-      <td class="rate">8 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-      <td class="rate">6 / 13 / 13</td>
-      <td class="rate">4 / 13 / 13</td>
-      <td class="rate">4 / 13 / 13</td>
-     </tr>
-    </tbody>
-   </table>
-
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <p>
-    Data output by <a href="http://www.colorless-sight.jp/touhou/ThSFC/">ThScoreFileConverter</a>.
-<script type="text/javascript">
-<!--
+    Data output by <a href="https://www.colorless-sight.jp/thsfc/">ThScoreFileConverter</a>.
+<script>
+// <![CDATA[
     document.write("Last updated: ", document.lastModified, ".");
-//-->
+// ]]>
 </script>
    </p>
-  </div>
+  </footer>
 
  </body>
 </html>

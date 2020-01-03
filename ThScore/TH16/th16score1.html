@@ -1,464 +1,473 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 
  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Stype-Type" content="text/css" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>東方天空璋スコアデータ</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="th16.css" />
-<style type="text/css">
-<!--
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>東方天空璋 スコアデータ</title>
+  <link rel="stylesheet" href="style.css" />
+<style>
+/* <![CDATA[ */
+    td.character { min-width: 100px; }
+    td.name { min-width: 70px; }
+    td.score { min-width: 70px; }
+    td.level { min-width: 70px; }
+    td.stage { min-width: 70px; }
+    td.season { min-width: 50px; }
+    td.date { min-width: 120px; }
+    td.slow { min-width: 50px; }
     table.count td.count { min-width: 80px; }
     table.count td.time { min-width: 80px; }
--->
+/* ]]> */
 </style>
  </head>
 
  <body>
-  <h1>東方天空璋スコアデータ</h1>
 
-  <hr />
+  <header>
+   <h1>東方天空璋 スコアデータ</h1>
+   <hr />
+   <nav>
+    <ul>
+     <li>スコアデータ全般</li>
+     <li><a href="th16score2.html">個別ランキング</a></li>
+     <li><a href="th16score3.html">プラクティス</a></li>
+     <li><a href="th16card1.html">御札戦歴（ゲーム本編）</a></li>
+     <li><a href="th16card2.html">御札戦歴（スペルプラクティス）</a></li>
+    </ul>
+    <ul>
+     <li><a href="#Easy">Easy</a></li>
+     <li><a href="#Normal">Normal</a></li>
+     <li><a href="#Hard">Hard</a></li>
+     <li><a href="#Lunatic">Lunatic</a></li>
+     <li><a href="#Extra">Extra</a></li>
+     <li><a href="#Other">その他の状態一覧</a></li>
+     <li><a href="#Clear">クリア達成度</a></li>
+    </ul>
+   </nav>
+  </header>
 
-  <div class="section">
+  <main>
+
+   <section>
+    <h2>難易度別スコア</h2>
+
+    <table class="score_per_level">
+     <caption id="Easy">Easy</caption>
+     <thead>
+      <tr>
+       <th class="character">Character</th>
+       <th class="name">Name</th>
+       <th class="score">Score</th>
+       <th class="date">Date</th>
+       <th class="season">Season</th>
+       <th class="stage">Stage</th>
+       <th class="slow">Slow</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="character">博麗 霊夢</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">134,406,110</td>
+       <td class="date">2017/08/30 00:01:49</td>
+       <td class="season">春</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.000%</td>
+      </tr>
+      <tr>
+       <td class="character">日焼けしたチルノ</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">358,760,730</td>
+       <td class="date">2019/11/23 23:48:29</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.019%</td>
+      </tr>
+      <tr>
+       <td class="character">射命丸 文</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">574,534,100</td>
+       <td class="date">2019/06/14 22:39:47</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.032%</td>
+      </tr>
+      <tr>
+       <td class="character">霧雨 魔理沙</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">311,064,220</td>
+       <td class="date">2019/11/23 23:18:56</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.027%</td>
+      </tr>
+     </tbody>
+    </table>
+
+    <table class="score_per_level">
+     <caption id="Normal">Normal</caption>
+     <thead>
+      <tr>
+       <th class="character">Character</th>
+       <th class="name">Name</th>
+       <th class="score">Score</th>
+       <th class="date">Date</th>
+       <th class="season">Season</th>
+       <th class="stage">Stage</th>
+       <th class="slow">Slow</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="character">博麗 霊夢</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,110,577,460</td>
+       <td class="date">2019/06/15 19:28:57</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.016%</td>
+      </tr>
+      <tr>
+       <td class="character">日焼けしたチルノ</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,393,695,750</td>
+       <td class="date">2019/06/13 21:25:00</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.051%</td>
+      </tr>
+      <tr>
+       <td class="character">射命丸 文</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,102,912,710</td>
+       <td class="date">2019/06/02 12:06:33</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.016%</td>
+      </tr>
+      <tr>
+       <td class="character">霧雨 魔理沙</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,196,987,000</td>
+       <td class="date">2019/06/15 22:54:08</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.258%</td>
+      </tr>
+     </tbody>
+    </table>
+
+    <table class="score_per_level">
+     <caption id="Hard">Hard</caption>
+     <thead>
+      <tr>
+       <th class="character">Character</th>
+       <th class="name">Name</th>
+       <th class="score">Score</th>
+       <th class="date">Date</th>
+       <th class="season">Season</th>
+       <th class="stage">Stage</th>
+       <th class="slow">Slow</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="character">博麗 霊夢</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">776,155,360</td>
+       <td class="date">2019/11/24 12:11:34</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.082%</td>
+      </tr>
+      <tr>
+       <td class="character">日焼けしたチルノ</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,062,402,700</td>
+       <td class="date">2019/04/29 17:32:38</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.000%</td>
+      </tr>
+      <tr>
+       <td class="character">射命丸 文</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,164,083,870</td>
+       <td class="date">2019/04/29 15:17:19</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.015%</td>
+      </tr>
+      <tr>
+       <td class="character">霧雨 魔理沙</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">670,319,780</td>
+       <td class="date">2019/12/08 01:35:13</td>
+       <td class="season">秋</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.019%</td>
+      </tr>
+     </tbody>
+    </table>
+
+    <table class="score_per_level">
+     <caption id="Lunatic">Lunatic</caption>
+     <thead>
+      <tr>
+       <th class="character">Character</th>
+       <th class="name">Name</th>
+       <th class="score">Score</th>
+       <th class="date">Date</th>
+       <th class="season">Season</th>
+       <th class="stage">Stage</th>
+       <th class="slow">Slow</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="character">博麗 霊夢</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,197,514,310</td>
+       <td class="date">2018/07/19 19:32:40</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.000%</td>
+      </tr>
+      <tr>
+       <td class="character">日焼けしたチルノ</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">2,021,954,720</td>
+       <td class="date">2019/06/05 18:41:35</td>
+       <td class="season">冬</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.016%</td>
+      </tr>
+      <tr>
+       <td class="character">射命丸 文</td>
+       <td class="name">        </td>
+       <td class="score">2,038,690,990</td>
+       <td class="date">2019/06/04 20:06:59</td>
+       <td class="season">冬</td>
+       <td class="stage">Stage 6</td>
+       <td class="slow">0.000%</td>
+      </tr>
+      <tr>
+       <td class="character">霧雨 魔理沙</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">1,462,208,410</td>
+       <td class="date">2019/08/05 14:12:27</td>
+       <td class="season">冬</td>
+       <td class="stage">Stage 6</td>
+       <td class="slow">0.057%</td>
+      </tr>
+     </tbody>
+    </table>
+
+    <table class="score_per_level">
+     <caption id="Extra">Extra</caption>
+     <thead>
+      <tr>
+       <th class="character">Character</th>
+       <th class="name">Name</th>
+       <th class="score">Score</th>
+       <th class="date">Date</th>
+       <th class="season">Season</th>
+       <th class="stage">Stage</th>
+       <th class="slow">Slow</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="character">博麗 霊夢</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">113,826,650</td>
+       <td class="date">2017/09/02 17:44:19</td>
+       <td class="season">土用</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.000%</td>
+      </tr>
+      <tr>
+       <td class="character">日焼けしたチルノ</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">146,212,210</td>
+       <td class="date">2017/12/04 13:55:50</td>
+       <td class="season">土用</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.026%</td>
+      </tr>
+      <tr>
+       <td class="character">射命丸 文</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">132,475,870</td>
+       <td class="date">2017/09/02 14:30:42</td>
+       <td class="season">土用</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">1.153%</td>
+      </tr>
+      <tr>
+       <td class="character">霧雨 魔理沙</td>
+       <td class="name">UTNMY   </td>
+       <td class="score">122,554,300</td>
+       <td class="date">2017/09/02 12:43:23</td>
+       <td class="season">土用</td>
+       <td class="stage">All Clear</td>
+       <td class="slow">0.552%</td>
+      </tr>
+     </tbody>
+    </table>
+
+   </section>
+
+   <hr />
+
+   <section>
+    <h2 id="Other">その他の状態一覧</h2>
+
+    <table class="count">
+     <thead>
+      <tr>
+       <th rowspan="2" class="character">Character</th>
+       <th rowspan="2" class="count">総プレイ回数</th>
+       <th rowspan="2" class="time">プレイ時間</th>
+       <th colspan="6">クリア回数</th>
+      </tr>
+      <tr>
+       <th class="level">Easy</th>
+       <th class="level">Normal</th>
+       <th class="level">Hard</th>
+       <th class="level">Lunatic</th>
+       <th class="level">Extra</th>
+       <th class="level">Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="character">博麗 霊夢</td>
+       <td class="count">1,522</td>
+       <td class="time">35:17:16</td>
+       <td class="level">1</td>
+       <td class="level">9</td>
+       <td class="level">4</td>
+       <td class="level">4</td>
+       <td class="level">2</td>
+       <td class="level">20</td>
+      </tr>
+      <tr>
+       <td class="character">日焼けしたチルノ</td>
+       <td class="count">4,310</td>
+       <td class="time">69:50:30</td>
+       <td class="level">1</td>
+       <td class="level">14</td>
+       <td class="level">6</td>
+       <td class="level">6</td>
+       <td class="level">2</td>
+       <td class="level">29</td>
+      </tr>
+      <tr>
+       <td class="character">射命丸 文</td>
+       <td class="count">3,864</td>
+       <td class="time">57:24:26</td>
+       <td class="level">1</td>
+       <td class="level">7</td>
+       <td class="level">4</td>
+       <td class="level">8</td>
+       <td class="level">1</td>
+       <td class="level">21</td>
+      </tr>
+      <tr>
+       <td class="character">霧雨 魔理沙</td>
+       <td class="count">1,243</td>
+       <td class="time">24:58:14</td>
+       <td class="level">1</td>
+       <td class="level">6</td>
+       <td class="level">4</td>
+       <td class="level">5</td>
+       <td class="level">1</td>
+       <td class="level">17</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td class="character">全主人公合計</td>
+       <td class="count">10,939</td>
+       <td class="time">187:30:28</td>
+       <td class="level">4</td>
+       <td class="level">36</td>
+       <td class="level">18</td>
+       <td class="level">23</td>
+       <td class="level">6</td>
+       <td class="level">87</td>
+      </tr>
+     </tfoot>
+    </table>
+   </section>
+
+   <hr />
+
+   <section>
+    <h2 id="Clear">クリア達成度</h2>
+
+    <table class="clear">
+     <thead>
+      <tr>
+       <th class="character">Character</th>
+       <th class="level">Easy</th>
+       <th class="level">Normal</th>
+       <th class="level">Hard</th>
+       <th class="level">Lunatic</th>
+       <th class="level">Extra</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="character">博麗 霊夢</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+      </tr>
+      <tr>
+       <td class="character">日焼けしたチルノ</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+      </tr>
+      <tr>
+       <td class="character">射命丸 文</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+      </tr>
+      <tr>
+       <td class="character">霧雨 魔理沙</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+       <td class="stage">All Clear</td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+
+  </main>
+
+  <footer>
    <p>
-    スコアデータ全般 /
-    <a href="th16score2.html">個別ランキング</a> /
-    <a href="th16score3.html">プラクティス</a> /
-    <a href="th16card1.html">御札戦歴（ゲーム本編）</a> /
-    <a href="th16card2.html">御札戦歴（スペルプラクティス）</a><br />
-    <a href="#Easy">Easy</a>
-    <a href="#Normal">Normal</a>
-    <a href="#Hard">Hard</a>
-    <a href="#Lunatic">Lunatic</a>
-    <a href="#Extra">Extra</a>
-    <a href="#Other">その他の状態一覧</a>
-    <a href="#Clear">クリア達成度</a>
-   </p>
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <h2>難易度別スコア</h2>
-
-   <table class="score_per_level">
-    <caption id="Easy">Easy</caption>
-    <thead>
-     <tr>
-      <td class="character">Character</td>
-      <td class="name">Name</td>
-      <td class="score">Score</td>
-      <td class="date">Date</td>
-      <td class="season">Season</td>
-      <td class="stage">Stage</td>
-      <td class="slow">Slow</td>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td class="character">博麗 霊夢</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">134,406,110</td>
-      <td class="date">2017/08/30 00:01:49</td>
-      <td class="season">春</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.000%</td>
-     </tr>
-     <tr>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">29,007,930</td>
-      <td class="date">2018/04/22 00:29:41</td>
-      <td class="season">夏</td>
-      <td class="stage">Stage 4</td>
-      <td class="slow">0.029%</td>
-     </tr>
-     <tr>
-      <td class="character">射命丸 文</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">574,534,100</td>
-      <td class="date">2019/06/14 22:39:47</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.032%</td>
-     </tr>
-     <tr>
-      <td class="character">霧雨 魔理沙</td>
-      <td class="name">--------</td>
-      <td class="score">1,000,000</td>
-      <td class="date">----/--/-- --:--:--</td>
-      <td class="season">-----</td>
-      <td class="stage">-------</td>
-      <td class="slow">-----%</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="score_per_level">
-    <caption id="Normal">Normal</caption>
-    <thead>
-     <tr>
-      <td class="character">Character</td>
-      <td class="name">Name</td>
-      <td class="score">Score</td>
-      <td class="date">Date</td>
-      <td class="season">Season</td>
-      <td class="stage">Stage</td>
-      <td class="slow">Slow</td>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td class="character">博麗 霊夢</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,110,577,460</td>
-      <td class="date">2019/06/15 19:28:57</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.016%</td>
-     </tr>
-     <tr>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,393,695,750</td>
-      <td class="date">2019/06/13 21:25:00</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.051%</td>
-     </tr>
-     <tr>
-      <td class="character">射命丸 文</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,102,912,710</td>
-      <td class="date">2019/06/02 12:06:33</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.016%</td>
-     </tr>
-     <tr>
-      <td class="character">霧雨 魔理沙</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,196,987,000</td>
-      <td class="date">2019/06/15 22:54:08</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.258%</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="score_per_level">
-    <caption id="Hard">Hard</caption>
-    <thead>
-     <tr>
-      <td class="character">Character</td>
-      <td class="name">Name</td>
-      <td class="score">Score</td>
-      <td class="date">Date</td>
-      <td class="season">Season</td>
-      <td class="stage">Stage</td>
-      <td class="slow">Slow</td>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td class="character">博麗 霊夢</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">392,465,110</td>
-      <td class="date">2018/06/18 16:44:36</td>
-      <td class="season">夏</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.037%</td>
-     </tr>
-     <tr>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,062,402,700</td>
-      <td class="date">2019/04/29 17:32:38</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.000%</td>
-     </tr>
-     <tr>
-      <td class="character">射命丸 文</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,164,083,870</td>
-      <td class="date">2019/04/29 15:17:19</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.015%</td>
-     </tr>
-     <tr>
-      <td class="character">霧雨 魔理沙</td>
-      <td class="name">kuzu    </td>
-      <td class="score">541,244,400</td>
-      <td class="date">2018/06/26 19:28:30</td>
-      <td class="season">冬</td>
-      <td class="stage">Stage 6</td>
-      <td class="slow">0.022%</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="score_per_level">
-    <caption id="Lunatic">Lunatic</caption>
-    <thead>
-     <tr>
-      <td class="character">Character</td>
-      <td class="name">Name</td>
-      <td class="score">Score</td>
-      <td class="date">Date</td>
-      <td class="season">Season</td>
-      <td class="stage">Stage</td>
-      <td class="slow">Slow</td>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td class="character">博麗 霊夢</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,197,514,310</td>
-      <td class="date">2018/07/19 19:32:40</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.000%</td>
-     </tr>
-     <tr>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">2,021,954,720</td>
-      <td class="date">2019/06/05 18:41:35</td>
-      <td class="season">冬</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.016%</td>
-     </tr>
-     <tr>
-      <td class="character">射命丸 文</td>
-      <td class="name">        </td>
-      <td class="score">2,038,690,990</td>
-      <td class="date">2019/06/04 20:06:59</td>
-      <td class="season">冬</td>
-      <td class="stage">Stage 6</td>
-      <td class="slow">0.000%</td>
-     </tr>
-     <tr>
-      <td class="character">霧雨 魔理沙</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">1,462,208,410</td>
-      <td class="date">2019/08/05 14:12:27</td>
-      <td class="season">冬</td>
-      <td class="stage">Stage 6</td>
-      <td class="slow">0.057%</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="score_per_level">
-    <caption id="Extra">Extra</caption>
-    <thead>
-     <tr>
-      <td class="character">Character</td>
-      <td class="name">Name</td>
-      <td class="score">Score</td>
-      <td class="date">Date</td>
-      <td class="season">Season</td>
-      <td class="stage">Stage</td>
-      <td class="slow">Slow</td>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td class="character">博麗 霊夢</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">113,826,650</td>
-      <td class="date">2017/09/02 17:44:19</td>
-      <td class="season">土用</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.000%</td>
-     </tr>
-     <tr>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">146,212,210</td>
-      <td class="date">2017/12/04 13:55:50</td>
-      <td class="season">土用</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.026%</td>
-     </tr>
-     <tr>
-      <td class="character">射命丸 文</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">132,475,870</td>
-      <td class="date">2017/09/02 14:30:42</td>
-      <td class="season">土用</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">1.153%</td>
-     </tr>
-     <tr>
-      <td class="character">霧雨 魔理沙</td>
-      <td class="name">UTNMY   </td>
-      <td class="score">122,554,300</td>
-      <td class="date">2017/09/02 12:43:23</td>
-      <td class="season">土用</td>
-      <td class="stage">All Clear</td>
-      <td class="slow">0.552%</td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <h2 id="Other">その他の状態一覧</h2>
-
-   <table class="count">
-    <thead>
-     <tr>
-      <td rowspan="2" class="character">Character</td>
-      <td rowspan="2" class="count">総プレイ回数</td>
-      <td rowspan="2" class="time">プレイ時間</td>
-      <td colspan="6">クリア回数</td>
-     </tr>
-     <tr>
-      <td class="level">Easy</td>
-      <td class="level">Normal</td>
-      <td class="level">Hard</td>
-      <td class="level">Lunatic</td>
-      <td class="level">Extra</td>
-      <td class="level">Total</td>
-     </tr>
-    </thead>
-    <tfoot>
-     <tr>
-      <td class="character">全主人公合計</td>
-      <td class="count">10,767</td>
-      <td class="time">183:44:38</td>
-      <td class="level">2</td>
-      <td class="level">36</td>
-      <td class="level">7</td>
-      <td class="level">23</td>
-      <td class="level">6</td>
-      <td class="level">74</td>
-     </tr>
-    </tfoot>
-    <tbody>
-     <tr>
-      <td class="character">博麗 霊夢</td>
-      <td class="count">1,456</td>
-      <td class="time">34:26:11</td>
-      <td class="level">1</td>
-      <td class="level">9</td>
-      <td class="level">1</td>
-      <td class="level">4</td>
-      <td class="level">2</td>
-      <td class="level">17</td>
-     </tr>
-     <tr>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="count">4,273</td>
-      <td class="time">68:57:17</td>
-      <td class="level">0</td>
-      <td class="level">14</td>
-      <td class="level">4</td>
-      <td class="level">6</td>
-      <td class="level">2</td>
-      <td class="level">26</td>
-     </tr>
-     <tr>
-      <td class="character">射命丸 文</td>
-      <td class="count">3,816</td>
-      <td class="time">56:10:54</td>
-      <td class="level">1</td>
-      <td class="level">7</td>
-      <td class="level">1</td>
-      <td class="level">8</td>
-      <td class="level">1</td>
-      <td class="level">18</td>
-     </tr>
-     <tr>
-      <td class="character">霧雨 魔理沙</td>
-      <td class="count">1,222</td>
-      <td class="time">24:10:14</td>
-      <td class="level">0</td>
-      <td class="level">6</td>
-      <td class="level">1</td>
-      <td class="level">5</td>
-      <td class="level">1</td>
-      <td class="level">13</td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <h2 id="Clear">クリア達成度</h2>
-
-   <table class="clear">
-    <thead>
-     <tr>
-      <td class="character">Character</td>
-      <td class="level">Easy</td>
-      <td class="level">Normal</td>
-      <td class="level">Hard</td>
-      <td class="level">Lunatic</td>
-      <td class="level">Extra</td>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td class="character">博麗 霊夢</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-     </tr>
-     <tr>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="stage">Stage 4</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-     </tr>
-     <tr>
-      <td class="character">射命丸 文</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-     </tr>
-     <tr>
-      <td class="character">霧雨 魔理沙</td>
-      <td class="stage">-------</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-      <td class="stage">All Clear</td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <p>
-    Data output by <a href="http://www.colorless-sight.jp/touhou/ThSFC/">ThScoreFileConverter</a>.
-<script type="text/javascript">
-<!--
+    Data output by <a href="https://www.colorless-sight.jp/thsfc/">ThScoreFileConverter</a>.
+<script>
+// <![CDATA[
     document.write("Last updated: ", document.lastModified, ".");
-//-->
+// ]]>
 </script>
    </p>
-  </div>
+  </footer>
 
  </body>
 </html>

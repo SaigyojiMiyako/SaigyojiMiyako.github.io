@@ -1,1320 +1,1322 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 
  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Stype-Type" content="text/css" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>東方天空璋スペルカードデータ</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="th16.css" />
-<style type="text/css">
-<!--
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>東方天空璋 スペルカードデータ</title>
+  <link rel="stylesheet" href="style.css" />
+<style>
+/* <![CDATA[ */
+    td.character { min-width: 100px; }
+    td.level { min-width: 70px; }
+    td.stage { min-width: 70px; }
     table.rate_per_card td.number { min-width: 40px; }
     table.rate_per_card td.card { min-width: 180px; }
     table.rate_per_card td.rate { min-width: 80px; }
     table.rate_per_level td.rate { min-width: 100px; }
     table.rate_per_stage td.rate { min-width: 100px; }
--->
+/* ]]> */
 </style>
  </head>
 
  <body>
-  <h1>東方天空璋スペルカードデータ</h1>
 
-  <hr />
+  <header>
+   <h1>東方天空璋 スペルカードデータ</h1>
+   <hr />
+   <nav>
+    <ul>
+     <li><a href="th16score1.html">スコアデータ全般</a></li>
+     <li><a href="th16score2.html">個別ランキング</a></li>
+     <li><a href="th16score3.html">プラクティス</a></li>
+     <li>御札戦歴（ゲーム本編）</li>
+     <li><a href="th16card2.html">御札戦歴（スペルプラクティス）</a></li>
+    </ul>
+    <ul>
+     <li><a href="#rate_per_card">スペルカード別</a></li>
+     <li><a href="#rate_per_level">難易度別</a></li>
+     <li><a href="#rate_per_stage">ステージ別</a></li>
+    </ul>
+   </nav>
+  </header>
 
-  <div class="section">
+  <main>
+
+   <section>
+    <h2 id="Card">御札戦歴（ゲーム本編）</h2>
+
+    <table class="rate_per_card">
+     <caption id="rate_per_card">スペルカード別取得率（取得回数 / 遭遇回数）</caption>
+     <thead>
+      <tr>
+       <th class="number">No.</th>
+       <th class="card">スペルカード名<br />（難易度）</th>
+       <th class="character">全主人公合計</th>
+       <th class="character">博麗 霊夢</th>
+       <th class="character">日焼けしたチルノ</th>
+       <th class="character">射命丸 文</th>
+       <th class="character">霧雨 魔理沙</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="number">No.01</td>
+       <td class="card">蝶符「ミニットスケールス」<br />(Easy)</td>
+       <td class="rate">8 / 18</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">6 / 7</td>
+       <td class="rate">0 / 9</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.02</td>
+       <td class="card">蝶符「ミニットスケールス」<br />(Normal)</td>
+       <td class="rate">319 / 412</td>
+       <td class="rate">105 / 125</td>
+       <td class="rate">94 / 128</td>
+       <td class="rate">75 / 109</td>
+       <td class="rate">45 / 50</td>
+      </tr>
+      <tr>
+       <td class="number">No.03</td>
+       <td class="card">蝶符「アゲハの鱗粉」<br />(Hard)</td>
+       <td class="rate">230 / 302</td>
+       <td class="rate">32 / 39</td>
+       <td class="rate">95 / 120</td>
+       <td class="rate">36 / 67</td>
+       <td class="rate">67 / 76</td>
+      </tr>
+      <tr>
+       <td class="number">No.04</td>
+       <td class="card">蝶符「アゲハの鱗粉」<br />(Lunatic)</td>
+       <td class="rate">655 / 1,033</td>
+       <td class="rate">150 / 190</td>
+       <td class="rate">155 / 274</td>
+       <td class="rate">164 / 367</td>
+       <td class="rate">186 / 202</td>
+      </tr>
+      <tr>
+       <td class="number">No.05</td>
+       <td class="card">蝶符「フラッタリングサマー」<br />(Easy)</td>
+       <td class="rate">15 / 16</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">6 / 6</td>
+       <td class="rate">7 / 8</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.06</td>
+       <td class="card">蝶符「フラッタリングサマー」<br />(Normal)</td>
+       <td class="rate">287 / 316</td>
+       <td class="rate">88 / 96</td>
+       <td class="rate">85 / 95</td>
+       <td class="rate">73 / 81</td>
+       <td class="rate">41 / 44</td>
+      </tr>
+      <tr>
+       <td class="number">No.07</td>
+       <td class="card">蝶符「真夏の羽ばたき」<br />(Hard)</td>
+       <td class="rate">182 / 219</td>
+       <td class="rate">26 / 30</td>
+       <td class="rate">76 / 89</td>
+       <td class="rate">26 / 41</td>
+       <td class="rate">54 / 59</td>
+      </tr>
+      <tr>
+       <td class="number">No.08</td>
+       <td class="card">蝶符「真夏の羽ばたき」<br />(Lunatic)</td>
+       <td class="rate">554 / 711</td>
+       <td class="rate">105 / 133</td>
+       <td class="rate">112 / 150</td>
+       <td class="rate">191 / 256</td>
+       <td class="rate">146 / 172</td>
+      </tr>
+      <tr>
+       <td class="number">No.09</td>
+       <td class="card">雨符「囚われの秋雨」<br />(Easy)</td>
+       <td class="rate">8 / 9</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">3 / 4</td>
+       <td class="rate">3 / 3</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.10</td>
+       <td class="card">雨符「囚われの秋雨」<br />(Normal)</td>
+       <td class="rate">122 / 196</td>
+       <td class="rate">47 / 64</td>
+       <td class="rate">29 / 58</td>
+       <td class="rate">24 / 44</td>
+       <td class="rate">22 / 30</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.11</td>
+       <td class="card">雨符「呪われた柴榑雨」<br />(Hard)</td>
+       <td class="rate">21 / 88</td>
+       <td class="rate">0 / 14</td>
+       <td class="rate">4 / 36</td>
+       <td class="rate">1 / 15</td>
+       <td class="rate">16 / 23</td>
+      </tr>
+      <tr>
+       <td class="number">No.12</td>
+       <td class="card">雨符「呪われた柴榑雨」<br />(Lunatic)</td>
+       <td class="rate">51 / 399</td>
+       <td class="rate">0 / 82</td>
+       <td class="rate">11 / 84</td>
+       <td class="rate">1 / 151</td>
+       <td class="rate">39 / 82</td>
+      </tr>
+      <tr>
+       <td class="number">No.13</td>
+       <td class="card">刃符「山姥の包丁研ぎ」<br />(Easy)</td>
+       <td class="rate">3 / 9</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">2 / 4</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.14</td>
+       <td class="card">刃符「山姥の包丁研ぎ」<br />(Normal)</td>
+       <td class="rate">83 / 163</td>
+       <td class="rate">29 / 50</td>
+       <td class="rate">19 / 49</td>
+       <td class="rate">19 / 35</td>
+       <td class="rate">16 / 29</td>
+      </tr>
+      <tr>
+       <td class="number">No.15</td>
+       <td class="card">刃符「山姥の鬼包丁研ぎ」<br />(Hard)</td>
+       <td class="rate">22 / 75</td>
+       <td class="rate">9 / 13</td>
+       <td class="rate">11 / 29</td>
+       <td class="rate">1 / 15</td>
+       <td class="rate">1 / 18</td>
+      </tr>
+      <tr>
+       <td class="number">No.16</td>
+       <td class="card">刃符「山姥の鬼包丁研ぎ」<br />(Lunatic)</td>
+       <td class="rate">69 / 371</td>
+       <td class="rate">40 / 79</td>
+       <td class="rate">5 / 82</td>
+       <td class="rate">14 / 138</td>
+       <td class="rate">10 / 72</td>
+      </tr>
+      <tr>
+       <td class="number">No.17</td>
+       <td class="card">尽符「マウンテンマーダー」<br />(Easy)</td>
+       <td class="rate">8 / 9</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">4 / 4</td>
+       <td class="rate">2 / 3</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.18</td>
+       <td class="card">尽符「マウンテンマーダー」<br />(Normal)</td>
+       <td class="rate">124 / 141</td>
+       <td class="rate">41 / 46</td>
+       <td class="rate">36 / 42</td>
+       <td class="rate">28 / 31</td>
+       <td class="rate">19 / 22</td>
+      </tr>
+      <tr>
+       <td class="number">No.19</td>
+       <td class="card">尽符「ブラッディマウンテンマーダー」<br />(Hard)</td>
+       <td class="rate">54 / 70</td>
+       <td class="rate">8 / 11</td>
+       <td class="rate">18 / 26</td>
+       <td class="rate">12 / 15</td>
+       <td class="rate">16 / 18</td>
+      </tr>
+      <tr>
+       <td class="number">No.20</td>
+       <td class="card">尽符「ブラッディマウンテンマーダー」<br />(Lunatic)</td>
+       <td class="rate">145 / 335</td>
+       <td class="rate">20 / 71</td>
+       <td class="rate">36 / 77</td>
+       <td class="rate">40 / 119</td>
+       <td class="rate">49 / 68</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.21</td>
+       <td class="card">春符「サプライズスプリング」<br />(Hard)</td>
+       <td class="rate">44 / 50</td>
+       <td class="rate">9 / 10</td>
+       <td class="rate">13 / 18</td>
+       <td class="rate">9 / 9</td>
+       <td class="rate">13 / 13</td>
+      </tr>
+      <tr>
+       <td class="number">No.22</td>
+       <td class="card">春符「サプライズスプリング」<br />(Lunatic)</td>
+       <td class="rate">227 / 256</td>
+       <td class="rate">48 / 50</td>
+       <td class="rate">59 / 64</td>
+       <td class="rate">75 / 96</td>
+       <td class="rate">45 / 46</td>
+      </tr>
+      <tr>
+       <td class="number">No.23</td>
+       <td class="card">犬符「野良犬の散歩」<br />(Easy)</td>
+       <td class="rate">7 / 9</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">3 / 4</td>
+       <td class="rate">3 / 3</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.24</td>
+       <td class="card">犬符「野良犬の散歩」<br />(Normal)</td>
+       <td class="rate">29 / 91</td>
+       <td class="rate">20 / 32</td>
+       <td class="rate">5 / 28</td>
+       <td class="rate">1 / 16</td>
+       <td class="rate">3 / 15</td>
+      </tr>
+      <tr>
+       <td class="number">No.25</td>
+       <td class="card">狗符「山狗の散歩」<br />(Hard)</td>
+       <td class="rate">8 / 40</td>
+       <td class="rate">3 / 7</td>
+       <td class="rate">2 / 13</td>
+       <td class="rate">1 / 9</td>
+       <td class="rate">2 / 11</td>
+      </tr>
+      <tr>
+       <td class="number">No.26</td>
+       <td class="card">狗符「山狗の散歩」<br />(Lunatic)</td>
+       <td class="rate">83 / 233</td>
+       <td class="rate">35 / 44</td>
+       <td class="rate">12 / 56</td>
+       <td class="rate">23 / 92</td>
+       <td class="rate">13 / 41</td>
+      </tr>
+      <tr>
+       <td class="number">No.27</td>
+       <td class="card">独楽「コマ犬回し」<br />(Easy)</td>
+       <td class="rate">2 / 9</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">1 / 4</td>
+       <td class="rate">1 / 3</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.28</td>
+       <td class="card">独楽「コマ犬回し」<br />(Normal)</td>
+       <td class="rate">51 / 83</td>
+       <td class="rate">16 / 31</td>
+       <td class="rate">18 / 26</td>
+       <td class="rate">7 / 13</td>
+       <td class="rate">10 / 13</td>
+      </tr>
+      <tr>
+       <td class="number">No.29</td>
+       <td class="card">独楽「コマ犬回し」<br />(Hard)</td>
+       <td class="rate">19 / 38</td>
+       <td class="rate">2 / 6</td>
+       <td class="rate">6 / 13</td>
+       <td class="rate">8 / 9</td>
+       <td class="rate">3 / 10</td>
+      </tr>
+      <tr>
+       <td class="number">No.30</td>
+       <td class="card">独楽「カールアップアンドダイ」<br />(Lunatic)</td>
+       <td class="rate">124 / 225</td>
+       <td class="rate">23 / 43</td>
+       <td class="rate">25 / 56</td>
+       <td class="rate">42 / 85</td>
+       <td class="rate">34 / 41</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.31</td>
+       <td class="card">狗符「独り阿吽の呼吸」<br />(Easy)</td>
+       <td class="rate">5 / 8</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">2 / 3</td>
+       <td class="rate">2 / 3</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.32</td>
+       <td class="card">狗符「独り阿吽の呼吸」<br />(Normal)</td>
+       <td class="rate">41 / 77</td>
+       <td class="rate">11 / 26</td>
+       <td class="rate">13 / 26</td>
+       <td class="rate">9 / 13</td>
+       <td class="rate">8 / 12</td>
+      </tr>
+      <tr>
+       <td class="number">No.33</td>
+       <td class="card">狗符「独り阿吽の呼吸」<br />(Hard)</td>
+       <td class="rate">25 / 37</td>
+       <td class="rate">5 / 6</td>
+       <td class="rate">6 / 13</td>
+       <td class="rate">4 / 8</td>
+       <td class="rate">10 / 10</td>
+      </tr>
+      <tr>
+       <td class="number">No.34</td>
+       <td class="card">狗符「独り阿吽の呼吸」<br />(Lunatic)</td>
+       <td class="rate">115 / 198</td>
+       <td class="rate">12 / 36</td>
+       <td class="rate">32 / 56</td>
+       <td class="rate">42 / 69</td>
+       <td class="rate">29 / 37</td>
+      </tr>
+      <tr>
+       <td class="number">No.35</td>
+       <td class="card">魔符「インスタントボーディ」<br />(Easy)</td>
+       <td class="rate">7 / 8</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">2 / 3</td>
+       <td class="rate">3 / 3</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.36</td>
+       <td class="card">魔符「インスタントボーディ」<br />(Normal)</td>
+       <td class="rate">44 / 62</td>
+       <td class="rate">12 / 17</td>
+       <td class="rate">14 / 22</td>
+       <td class="rate">8 / 13</td>
+       <td class="rate">10 / 10</td>
+      </tr>
+      <tr>
+       <td class="number">No.37</td>
+       <td class="card">魔符「即席菩提」<br />(Hard)</td>
+       <td class="rate">27 / 43</td>
+       <td class="rate">5 / 6</td>
+       <td class="rate">9 / 11</td>
+       <td class="rate">4 / 14</td>
+       <td class="rate">9 / 12</td>
+      </tr>
+      <tr>
+       <td class="number">No.38</td>
+       <td class="card">魔符「即席菩提」<br />(Lunatic)</td>
+       <td class="rate">115 / 176</td>
+       <td class="rate">20 / 27</td>
+       <td class="rate">39 / 71</td>
+       <td class="rate">33 / 49</td>
+       <td class="rate">23 / 29</td>
+      </tr>
+      <tr>
+       <td class="number">No.39</td>
+       <td class="card">魔符「バレットゴーレム」<br />(Easy)</td>
+       <td class="rate">0 / 8</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.40</td>
+       <td class="card">魔符「バレットゴーレム」<br />(Normal)</td>
+       <td class="rate">1 / 60</td>
+       <td class="rate">1 / 17</td>
+       <td class="rate">0 / 22</td>
+       <td class="rate">0 / 12</td>
+       <td class="rate">0 / 9</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.41</td>
+       <td class="card">魔符「ペットの巨大弾生命体」<br />(Hard)</td>
+       <td class="rate">0 / 41</td>
+       <td class="rate">0 / 6</td>
+       <td class="rate">0 / 11</td>
+       <td class="rate">0 / 14</td>
+       <td class="rate">0 / 10</td>
+      </tr>
+      <tr>
+       <td class="number">No.42</td>
+       <td class="card">魔符「ペットの巨大弾生命体」<br />(Lunatic)</td>
+       <td class="rate">0 / 164</td>
+       <td class="rate">0 / 26</td>
+       <td class="rate">0 / 65</td>
+       <td class="rate">0 / 47</td>
+       <td class="rate">0 / 26</td>
+      </tr>
+      <tr>
+       <td class="number">No.43</td>
+       <td class="card">地蔵「クリミナルサルヴェイション」<br />(Easy)</td>
+       <td class="rate">1 / 6</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">1 / 2</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.44</td>
+       <td class="card">地蔵「クリミナルサルヴェイション」<br />(Normal)</td>
+       <td class="rate">29 / 60</td>
+       <td class="rate">5 / 17</td>
+       <td class="rate">12 / 22</td>
+       <td class="rate">7 / 12</td>
+       <td class="rate">5 / 9</td>
+      </tr>
+      <tr>
+       <td class="number">No.45</td>
+       <td class="card">地蔵「業火救済」<br />(Hard)</td>
+       <td class="rate">27 / 40</td>
+       <td class="rate">4 / 6</td>
+       <td class="rate">10 / 11</td>
+       <td class="rate">6 / 13</td>
+       <td class="rate">7 / 10</td>
+      </tr>
+      <tr>
+       <td class="number">No.46</td>
+       <td class="card">地蔵「業火救済」<br />(Lunatic)</td>
+       <td class="rate">86 / 156</td>
+       <td class="rate">21 / 26</td>
+       <td class="rate">17 / 61</td>
+       <td class="rate">30 / 45</td>
+       <td class="rate">18 / 24</td>
+      </tr>
+      <tr>
+       <td class="number">No.47</td>
+       <td class="card">竹符「バンブースピアダンス」<br />(Easy)</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.48</td>
+       <td class="card">竹符「バンブースピアダンス」<br />(Normal)</td>
+       <td class="rate">14 / 47</td>
+       <td class="rate">3 / 12</td>
+       <td class="rate">7 / 18</td>
+       <td class="rate">3 / 10</td>
+       <td class="rate">1 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.49</td>
+       <td class="card">竹符「バンブークレイジーダンス」<br />(Hard)</td>
+       <td class="rate">17 / 31</td>
+       <td class="rate">2 / 3</td>
+       <td class="rate">8 / 15</td>
+       <td class="rate">4 / 6</td>
+       <td class="rate">3 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.50</td>
+       <td class="card">竹符「バンブークレイジーダンス」<br />(Lunatic)</td>
+       <td class="rate">56 / 111</td>
+       <td class="rate">4 / 14</td>
+       <td class="rate">14 / 36</td>
+       <td class="rate">29 / 42</td>
+       <td class="rate">9 / 19</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.51</td>
+       <td class="card">茗荷「フォゲットユアネーム」<br />(Easy)</td>
+       <td class="rate">4 / 5</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">2 / 2</td>
+       <td class="rate">2 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.52</td>
+       <td class="card">茗荷「フォゲットユアネーム」<br />(Normal)</td>
+       <td class="rate">3 / 5</td>
+       <td class="rate">1 / 2</td>
+       <td class="rate">1 / 2</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.53</td>
+       <td class="card">茗荷「フォゲットユアネーム」<br />(Hard)</td>
+       <td class="rate">2 / 4</td>
+       <td class="rate">1 / 2</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.54</td>
+       <td class="card">茗荷「フォゲットユアネーム」<br />(Lunatic)</td>
+       <td class="rate">4 / 22</td>
+       <td class="rate">3 / 13</td>
+       <td class="rate">0 / 7</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.55</td>
+       <td class="card">笹符「タナバタスターフェスティバル」<br />(Easy)</td>
+       <td class="rate">3 / 3</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.56</td>
+       <td class="card">笹符「タナバタスターフェスティバル」<br />(Normal)</td>
+       <td class="rate">8 / 23</td>
+       <td class="rate">2 / 6</td>
+       <td class="rate">1 / 10</td>
+       <td class="rate">2 / 3</td>
+       <td class="rate">3 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.57</td>
+       <td class="card">笹符「タナバタスターフェスティバル」<br />(Hard)</td>
+       <td class="rate">8 / 19</td>
+       <td class="rate">1 / 3</td>
+       <td class="rate">7 / 12</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.58</td>
+       <td class="card">笹符「タナバタスターフェスティバル」<br />(Lunatic)</td>
+       <td class="rate">11 / 33</td>
+       <td class="rate">2 / 13</td>
+       <td class="rate">5 / 13</td>
+       <td class="rate">2 / 3</td>
+       <td class="rate">2 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.59</td>
+       <td class="card">冥加「ビハインドユー」<br />(Easy)</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.60</td>
+       <td class="card">冥加「ビハインドユー」<br />(Normal)</td>
+       <td class="rate">10 / 28</td>
+       <td class="rate">3 / 7</td>
+       <td class="rate">4 / 10</td>
+       <td class="rate">1 / 7</td>
+       <td class="rate">2 / 4</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.61</td>
+       <td class="card">冥加「ビハインドユー」<br />(Hard)</td>
+       <td class="rate">5 / 16</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">1 / 3</td>
+       <td class="rate">2 / 7</td>
+       <td class="rate">2 / 4</td>
+      </tr>
+      <tr>
+       <td class="number">No.62</td>
+       <td class="card">冥加「ビハインドユー」<br />(Lunatic)</td>
+       <td class="rate">42 / 97</td>
+       <td class="rate">8 / 14</td>
+       <td class="rate">11 / 28</td>
+       <td class="rate">17 / 38</td>
+       <td class="rate">6 / 17</td>
+      </tr>
+      <tr>
+       <td class="number">No.63</td>
+       <td class="card">舞符「ビハインドフェスティバル」<br />(Easy)</td>
+       <td class="rate">1 / 6</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">1 / 2</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.64</td>
+       <td class="card">舞符「ビハインドフェスティバル」<br />(Normal)</td>
+       <td class="rate">5 / 51</td>
+       <td class="rate">1 / 13</td>
+       <td class="rate">2 / 20</td>
+       <td class="rate">2 / 10</td>
+       <td class="rate">0 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.65</td>
+       <td class="card">舞符「ビハインドフェスティバル」<br />(Hard)</td>
+       <td class="rate">11 / 35</td>
+       <td class="rate">1 / 5</td>
+       <td class="rate">5 / 15</td>
+       <td class="rate">3 / 7</td>
+       <td class="rate">2 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.66</td>
+       <td class="card">舞符「ビハインドフェスティバル」<br />(Lunatic)</td>
+       <td class="rate">16 / 125</td>
+       <td class="rate">1 / 26</td>
+       <td class="rate">9 / 39</td>
+       <td class="rate">5 / 40</td>
+       <td class="rate">1 / 20</td>
+      </tr>
+      <tr>
+       <td class="number">No.67</td>
+       <td class="card">狂舞「テングオドシ」<br />(Easy)</td>
+       <td class="rate">3 / 6</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">2 / 2</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.68</td>
+       <td class="card">狂舞「テングオドシ」<br />(Normal)</td>
+       <td class="rate">4 / 51</td>
+       <td class="rate">1 / 13</td>
+       <td class="rate">2 / 20</td>
+       <td class="rate">0 / 10</td>
+       <td class="rate">1 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.69</td>
+       <td class="card">狂舞「狂乱天狗怖し」<br />(Hard)</td>
+       <td class="rate">1 / 35</td>
+       <td class="rate">1 / 5</td>
+       <td class="rate">0 / 15</td>
+       <td class="rate">0 / 7</td>
+       <td class="rate">0 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.70</td>
+       <td class="card">狂舞「狂乱天狗怖し」<br />(Lunatic)</td>
+       <td class="rate">2 / 124</td>
+       <td class="rate">0 / 26</td>
+       <td class="rate">0 / 38</td>
+       <td class="rate">1 / 40</td>
+       <td class="rate">1 / 20</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.71</td>
+       <td class="card">後符「秘神の後光」<br />(Easy)</td>
+       <td class="rate">2 / 5</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">2 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.72</td>
+       <td class="card">後符「秘神の後光」<br />(Normal)</td>
+       <td class="rate">10 / 56</td>
+       <td class="rate">0 / 13</td>
+       <td class="rate">4 / 26</td>
+       <td class="rate">4 / 9</td>
+       <td class="rate">2 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.73</td>
+       <td class="card">後符「秘神の後光」<br />(Hard)</td>
+       <td class="rate">6 / 25</td>
+       <td class="rate">1 / 4</td>
+       <td class="rate">1 / 10</td>
+       <td class="rate">2 / 5</td>
+       <td class="rate">2 / 6</td>
+      </tr>
+      <tr>
+       <td class="number">No.74</td>
+       <td class="card">後符「絶対秘神の後光」<br />(Lunatic)</td>
+       <td class="rate">21 / 139</td>
+       <td class="rate">5 / 24</td>
+       <td class="rate">4 / 43</td>
+       <td class="rate">10 / 54</td>
+       <td class="rate">2 / 18</td>
+      </tr>
+      <tr>
+       <td class="number">No.75</td>
+       <td class="card">裏夏「スコーチ・バイ・ホットサマー」<br />(Easy)</td>
+       <td class="rate">3 / 5</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">2 / 2</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.76</td>
+       <td class="card">裏夏「スコーチ・バイ・ホットサマー」<br />(Normal)</td>
+       <td class="rate">31 / 54</td>
+       <td class="rate">6 / 12</td>
+       <td class="rate">13 / 26</td>
+       <td class="rate">6 / 8</td>
+       <td class="rate">6 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.77</td>
+       <td class="card">裏夏「異常猛暑の焦土」<br />(Hard)</td>
+       <td class="rate">17 / 25</td>
+       <td class="rate">3 / 4</td>
+       <td class="rate">8 / 10</td>
+       <td class="rate">4 / 5</td>
+       <td class="rate">2 / 6</td>
+      </tr>
+      <tr>
+       <td class="number">No.78</td>
+       <td class="card">裏夏「異常猛暑の焦土」<br />(Lunatic)</td>
+       <td class="rate">72 / 127</td>
+       <td class="rate">17 / 24</td>
+       <td class="rate">25 / 39</td>
+       <td class="rate">22 / 49</td>
+       <td class="rate">8 / 15</td>
+      </tr>
+      <tr>
+       <td class="number">No.79</td>
+       <td class="card">裏秋「ダイ・オブ・ファミン」<br />(Easy)</td>
+       <td class="rate">1 / 5</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.80</td>
+       <td class="card">裏秋「ダイ・オブ・ファミン」<br />(Normal)</td>
+       <td class="rate">5 / 53</td>
+       <td class="rate">1 / 12</td>
+       <td class="rate">1 / 26</td>
+       <td class="rate">1 / 7</td>
+       <td class="rate">2 / 8</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.81</td>
+       <td class="card">裏秋「異常枯死の餓鬼」<br />(Hard)</td>
+       <td class="rate">9 / 25</td>
+       <td class="rate">1 / 4</td>
+       <td class="rate">5 / 10</td>
+       <td class="rate">2 / 5</td>
+       <td class="rate">1 / 6</td>
+      </tr>
+      <tr>
+       <td class="number">No.82</td>
+       <td class="card">裏秋「異常枯死の餓鬼」<br />(Lunatic)</td>
+       <td class="rate">19 / 117</td>
+       <td class="rate">2 / 24</td>
+       <td class="rate">7 / 34</td>
+       <td class="rate">6 / 45</td>
+       <td class="rate">4 / 14</td>
+      </tr>
+      <tr>
+       <td class="number">No.83</td>
+       <td class="card">裏冬「ブラックスノーマン」<br />(Easy)</td>
+       <td class="rate">2 / 5</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.84</td>
+       <td class="card">裏冬「ブラックスノーマン」<br />(Normal)</td>
+       <td class="rate">3 / 53</td>
+       <td class="rate">1 / 12</td>
+       <td class="rate">1 / 26</td>
+       <td class="rate">0 / 7</td>
+       <td class="rate">1 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.85</td>
+       <td class="card">裏冬「異常降雪の雪だるま」<br />(Hard)</td>
+       <td class="rate">6 / 25</td>
+       <td class="rate">1 / 4</td>
+       <td class="rate">1 / 10</td>
+       <td class="rate">2 / 5</td>
+       <td class="rate">2 / 6</td>
+      </tr>
+      <tr>
+       <td class="number">No.86</td>
+       <td class="card">裏冬「異常降雪の雪だるま」<br />(Lunatic)</td>
+       <td class="rate">6 / 111</td>
+       <td class="rate">1 / 22</td>
+       <td class="rate">2 / 34</td>
+       <td class="rate">2 / 41</td>
+       <td class="rate">1 / 14</td>
+      </tr>
+      <tr>
+       <td class="number">No.87</td>
+       <td class="card">裏春「エイプリルウィザード」<br />(Easy)</td>
+       <td class="rate">1 / 5</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">1 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.88</td>
+       <td class="card">裏春「エイプリルウィザード」<br />(Normal)</td>
+       <td class="rate">22 / 49</td>
+       <td class="rate">3 / 10</td>
+       <td class="rate">11 / 25</td>
+       <td class="rate">5 / 7</td>
+       <td class="rate">3 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.89</td>
+       <td class="card">裏春「異常落花の魔術使い」<br />(Hard)</td>
+       <td class="rate">19 / 24</td>
+       <td class="rate">3 / 4</td>
+       <td class="rate">8 / 10</td>
+       <td class="rate">4 / 5</td>
+       <td class="rate">4 / 5</td>
+      </tr>
+      <tr>
+       <td class="number">No.90</td>
+       <td class="card">裏春「異常落花の魔術使い」<br />(Lunatic)</td>
+       <td class="rate">67 / 100</td>
+       <td class="rate">14 / 21</td>
+       <td class="rate">18 / 29</td>
+       <td class="rate">23 / 36</td>
+       <td class="rate">12 / 14</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.91</td>
+       <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Easy)</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.92</td>
+       <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Normal)</td>
+       <td class="rate">0 / 6</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.93</td>
+       <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Hard)</td>
+       <td class="rate">0 / 5</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.94</td>
+       <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Lunatic)</td>
+       <td class="rate">0 / 23</td>
+       <td class="rate">0 / 11</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 8</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.95</td>
+       <td class="card">「裏・パーフェクトサマーアイス」<br />(Easy)</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.96</td>
+       <td class="card">「裏・パーフェクトサマーアイス」<br />(Normal)</td>
+       <td class="rate">0 / 9</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.97</td>
+       <td class="card">「裏・パーフェクトサマーアイス」<br />(Hard)</td>
+       <td class="rate">0 / 7</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 4</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.98</td>
+       <td class="card">「裏・パーフェクトサマーアイス」<br />(Lunatic)</td>
+       <td class="rate">0 / 8</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.99</td>
+       <td class="card">「裏・クレイジーフォールウィンド」<br />(Easy)</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">0 / 0</td>
+      </tr>
+      <tr>
+       <td class="number">No.100</td>
+       <td class="card">「裏・クレイジーフォールウィンド」<br />(Normal)</td>
+       <td class="rate">0 / 13</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 8</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.101</td>
+       <td class="card">「裏・クレイジーフォールウィンド」<br />(Hard)</td>
+       <td class="rate">0 / 4</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.102</td>
+       <td class="card">「裏・クレイジーフォールウィンド」<br />(Lunatic)</td>
+       <td class="rate">0 / 15</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 8</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.103</td>
+       <td class="card">「裏・エクストリームウィンター」<br />(Easy)</td>
+       <td class="rate">3 / 3</td>
+       <td class="rate">0 / 0</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.104</td>
+       <td class="card">「裏・エクストリームウィンター」<br />(Normal)</td>
+       <td class="rate">0 / 21</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 13</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.105</td>
+       <td class="card">「裏・エクストリームウィンター」<br />(Hard)</td>
+       <td class="rate">0 / 8</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 4</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.106</td>
+       <td class="card">「裏・エクストリームウィンター」<br />(Lunatic)</td>
+       <td class="rate">0 / 46</td>
+       <td class="rate">0 / 4</td>
+       <td class="rate">0 / 10</td>
+       <td class="rate">0 / 22</td>
+       <td class="rate">0 / 10</td>
+      </tr>
+      <tr>
+       <td class="number">No.107</td>
+       <td class="card">鼓舞「パワフルチアーズ」<br />(Extra)</td>
+       <td class="rate">95 / 190</td>
+       <td class="rate">42 / 99</td>
+       <td class="rate">35 / 64</td>
+       <td class="rate">10 / 18</td>
+       <td class="rate">8 / 9</td>
+      </tr>
+      <tr>
+       <td class="number">No.108</td>
+       <td class="card">狂舞「クレイジーバックダンス」<br />(Extra)</td>
+       <td class="rate">112 / 145</td>
+       <td class="rate">71 / 79</td>
+       <td class="rate">27 / 48</td>
+       <td class="rate">7 / 10</td>
+       <td class="rate">7 / 8</td>
+      </tr>
+      <tr>
+       <td class="number">No.109</td>
+       <td class="card">弾舞「二つ目の台風」<br />(Extra)</td>
+       <td class="rate">0 / 128</td>
+       <td class="rate">0 / 77</td>
+       <td class="rate">0 / 37</td>
+       <td class="rate">0 / 7</td>
+       <td class="rate">0 / 7</td>
+      </tr>
+      <tr>
+       <td class="number">No.110</td>
+       <td class="card">秘儀「リバースインヴォーカー」<br />(Extra)</td>
+       <td class="rate">4 / 55</td>
+       <td class="rate">4 / 31</td>
+       <td class="rate">0 / 17</td>
+       <td class="rate">0 / 4</td>
+       <td class="rate">0 / 3</td>
+      </tr>
+
+      <tr>
+       <td class="number">No.111</td>
+       <td class="card">秘儀「裏切りの後方射撃」<br />(Extra)</td>
+       <td class="rate">2 / 40</td>
+       <td class="rate">2 / 20</td>
+       <td class="rate">0 / 13</td>
+       <td class="rate">0 / 4</td>
+       <td class="rate">0 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.112</td>
+       <td class="card">秘儀「弾幕の玉繭」<br />(Extra)</td>
+       <td class="rate">11 / 34</td>
+       <td class="rate">5 / 16</td>
+       <td class="rate">4 / 11</td>
+       <td class="rate">1 / 4</td>
+       <td class="rate">1 / 3</td>
+      </tr>
+      <tr>
+       <td class="number">No.113</td>
+       <td class="card">秘儀「穢那の火」<br />(Extra)</td>
+       <td class="rate">0 / 25</td>
+       <td class="rate">0 / 12</td>
+       <td class="rate">0 / 9</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.114</td>
+       <td class="card">秘儀「後戸の狂言」<br />(Extra)</td>
+       <td class="rate">0 / 19</td>
+       <td class="rate">0 / 10</td>
+       <td class="rate">0 / 6</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.115</td>
+       <td class="card">秘儀「マターラドゥッカ」<br />(Extra)</td>
+       <td class="rate">7 / 16</td>
+       <td class="rate">2 / 8</td>
+       <td class="rate">3 / 5</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">1 / 2</td>
+      </tr>
+      <tr>
+       <td class="number">No.116</td>
+       <td class="card">秘儀「七星の剣」<br />(Extra)</td>
+       <td class="rate">0 / 14</td>
+       <td class="rate">0 / 7</td>
+       <td class="rate">0 / 5</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.117</td>
+       <td class="card">秘儀「無縁の芸能者」<br />(Extra)</td>
+       <td class="rate">0 / 12</td>
+       <td class="rate">0 / 6</td>
+       <td class="rate">0 / 4</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.118</td>
+       <td class="card">「背面の暗黒猿楽」<br />(Extra)</td>
+       <td class="rate">4 / 10</td>
+       <td class="rate">1 / 5</td>
+       <td class="rate">1 / 3</td>
+       <td class="rate">1 / 1</td>
+       <td class="rate">1 / 1</td>
+      </tr>
+      <tr>
+       <td class="number">No.119</td>
+       <td class="card">「アナーキーバレットヘル」<br />(Extra)</td>
+       <td class="rate">0 / 7</td>
+       <td class="rate">0 / 2</td>
+       <td class="rate">0 / 3</td>
+       <td class="rate">0 / 1</td>
+       <td class="rate">0 / 1</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td colspan="2">Total</td>
+       <td class="rate">4,867 / 9,823</td>
+       <td class="rate">1,182 / 2,282</td>
+       <td class="rate">1,371 / 3,005</td>
+       <td class="rate">1,229 / 2,804</td>
+       <td class="rate">1,085 / 1,732</td>
+      </tr>
+     </tfoot>
+    </table>
+
+    <table class="rate_per_level">
+     <caption id="rate_per_level">難易度別スペルカード蒐集率（取得回数 / 挑戦回数 / 総数）</caption>
+     <thead>
+      <tr>
+       <th class="level">難易度</th>
+       <th class="character">全主人公合計</th>
+       <th class="character">博麗 霊夢</th>
+       <th class="character">日焼けしたチルノ</th>
+       <th class="character">射命丸 文</th>
+       <th class="character">霧雨 魔理沙</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="level">Easy</td>
+       <td class="rate">20 / 24 / 26</td>
+       <td class="rate">9 / 21 / 26</td>
+       <td class="rate">16 / 22 / 26</td>
+       <td class="rate">13 / 21 / 26</td>
+       <td class="rate">10 / 21 / 26</td>
+      </tr>
+      <tr>
+       <td class="level">Normal</td>
+       <td class="rate">22 / 26 / 26</td>
+       <td class="rate">21 / 26 / 26</td>
+       <td class="rate">21 / 26 / 26</td>
+       <td class="rate">18 / 25 / 26</td>
+       <td class="rate">20 / 26 / 26</td>
+      </tr>
+      <tr>
+       <td class="level">Hard</td>
+       <td class="rate">22 / 27 / 27</td>
+       <td class="rate">20 / 27 / 27</td>
+       <td class="rate">20 / 26 / 27</td>
+       <td class="rate">19 / 26 / 27</td>
+       <td class="rate">20 / 27 / 27</td>
+      </tr>
+      <tr>
+       <td class="level">Lunatic</td>
+       <td class="rate">22 / 27 / 27</td>
+       <td class="rate">20 / 27 / 27</td>
+       <td class="rate">20 / 27 / 27</td>
+       <td class="rate">21 / 26 / 27</td>
+       <td class="rate">22 / 27 / 27</td>
+      </tr>
+      <tr>
+       <td class="level">Extra</td>
+       <td class="rate">7 / 13 / 13</td>
+       <td class="rate">7 / 13 / 13</td>
+       <td class="rate">5 / 13 / 13</td>
+       <td class="rate">5 / 13 / 13</td>
+       <td class="rate">5 / 13 / 13</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td>Total</td>
+       <td class="rate">93 / 117 / 119</td>
+       <td class="rate">77 / 114 / 119</td>
+       <td class="rate">82 / 114 / 119</td>
+       <td class="rate">76 / 111 / 119</td>
+       <td class="rate">77 / 114 / 119</td>
+      </tr>
+     </tfoot>
+    </table>
+
+    <table class="rate_per_stage">
+     <caption id="rate_per_stage">ステージ別スペルカード蒐集率（取得回数 / 挑戦回数 / 総数）</caption>
+     <thead>
+      <tr>
+       <th class="stage">ステージ</th>
+       <th class="character">全主人公合計</th>
+       <th class="character">博麗 霊夢</th>
+       <th class="character">日焼けしたチルノ</th>
+       <th class="character">射命丸 文</th>
+       <th class="character">霧雨 魔理沙</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="stage">Stage 1</td>
+       <td class="rate">8 / 8 / 8</td>
+       <td class="rate">8 / 8 / 8</td>
+       <td class="rate">8 / 8 / 8</td>
+       <td class="rate">7 / 8 / 8</td>
+       <td class="rate">8 / 8 / 8</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 2</td>
+       <td class="rate">12 / 12 / 12</td>
+       <td class="rate">10 / 12 / 12</td>
+       <td class="rate">12 / 12 / 12</td>
+       <td class="rate">11 / 12 / 12</td>
+       <td class="rate">11 / 12 / 12</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 3</td>
+       <td class="rate">14 / 14 / 14</td>
+       <td class="rate">12 / 14 / 14</td>
+       <td class="rate">14 / 14 / 14</td>
+       <td class="rate">14 / 14 / 14</td>
+       <td class="rate">12 / 14 / 14</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 4</td>
+       <td class="rate">9 / 12 / 12</td>
+       <td class="rate">8 / 12 / 12</td>
+       <td class="rate">8 / 12 / 12</td>
+       <td class="rate">7 / 12 / 12</td>
+       <td class="rate">7 / 12 / 12</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 5</td>
+       <td class="rate">22 / 24 / 24</td>
+       <td class="rate">17 / 22 / 24</td>
+       <td class="rate">17 / 22 / 24</td>
+       <td class="rate">14 / 19 / 24</td>
+       <td class="rate">17 / 22 / 24</td>
+      </tr>
+      <tr>
+       <td class="stage">Stage 6</td>
+       <td class="rate">21 / 34 / 36</td>
+       <td class="rate">15 / 33 / 36</td>
+       <td class="rate">18 / 33 / 36</td>
+       <td class="rate">18 / 33 / 36</td>
+       <td class="rate">17 / 33 / 36</td>
+      </tr>
+      <tr>
+       <td class="stage">Extra</td>
+       <td class="rate">7 / 13 / 13</td>
+       <td class="rate">7 / 13 / 13</td>
+       <td class="rate">5 / 13 / 13</td>
+       <td class="rate">5 / 13 / 13</td>
+       <td class="rate">5 / 13 / 13</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td>Total</td>
+       <td class="rate">93 / 117 / 119</td>
+       <td class="rate">77 / 114 / 119</td>
+       <td class="rate">82 / 114 / 119</td>
+       <td class="rate">76 / 111 / 119</td>
+       <td class="rate">77 / 114 / 119</td>
+      </tr>
+     </tfoot>
+    </table>
+
+   </section>
+
+  </main>
+
+  <footer>
    <p>
-    <a href="th16score1.html">スコアデータ全般</a> /
-    <a href="th16score2.html">個別ランキング</a> /
-    <a href="th16score3.html">プラクティス</a> /
-    御札戦歴（ゲーム本編） /
-    <a href="th16card2.html">御札戦歴（スペルプラクティス）</a><br />
-    <a href="#rate_per_card">スペルカード別</a> /
-    <a href="#rate_per_level">難易度別</a> /
-    <a href="#rate_per_stage">ステージ別</a>
-   </p>
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <h2 id="Card">御札戦歴（ゲーム本編）</h2>
-
-   <table class="rate_per_card">
-    <caption id="rate_per_card">スペルカード別取得率（取得回数 / 遭遇回数）</caption>
-    <thead>
-     <tr>
-      <td class="number">No.</td>
-      <td class="card">スペルカード名<br />（難易度）</td>
-      <td class="character">全主人公合計</td>
-      <td class="character">博麗 霊夢</td>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="character">射命丸 文</td>
-      <td class="character">霧雨 魔理沙</td>
-     </tr>
-    </thead>
-    <tfoot>
-     <tr>
-      <td colspan="2">Total</td>
-      <td class="rate">4,678 / 9,438</td>
-      <td class="rate">1,144 / 2,200</td>
-      <td class="rate">1,331 / 2,910</td>
-      <td class="rate">1,168 / 2,691</td>
-      <td class="rate">1,035 / 1,637</td>
-     </tr>
-    </tfoot>
-
-    <tbody>
-     <tr>
-      <td class="number">No.01</td>
-      <td class="card">蝶符「ミニットスケールス」<br />(Easy)</td>
-      <td class="rate">6 / 16</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">5 / 6</td>
-      <td class="rate">0 / 9</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.02</td>
-      <td class="card">蝶符「ミニットスケールス」<br />(Normal)</td>
-      <td class="rate">319 / 412</td>
-      <td class="rate">105 / 125</td>
-      <td class="rate">94 / 128</td>
-      <td class="rate">75 / 109</td>
-      <td class="rate">45 / 50</td>
-     </tr>
-     <tr>
-      <td class="number">No.03</td>
-      <td class="card">蝶符「アゲハの鱗粉」<br />(Hard)</td>
-      <td class="rate">200 / 259</td>
-      <td class="rate">29 / 35</td>
-      <td class="rate">88 / 107</td>
-      <td class="rate">23 / 50</td>
-      <td class="rate">60 / 67</td>
-     </tr>
-     <tr>
-      <td class="number">No.04</td>
-      <td class="card">蝶符「アゲハの鱗粉」<br />(Lunatic)</td>
-      <td class="rate">655 / 1,033</td>
-      <td class="rate">150 / 190</td>
-      <td class="rate">155 / 274</td>
-      <td class="rate">164 / 367</td>
-      <td class="rate">186 / 202</td>
-     </tr>
-     <tr>
-      <td class="number">No.05</td>
-      <td class="card">蝶符「フラッタリングサマー」<br />(Easy)</td>
-      <td class="rate">13 / 14</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">5 / 5</td>
-      <td class="rate">7 / 8</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.06</td>
-      <td class="card">蝶符「フラッタリングサマー」<br />(Normal)</td>
-      <td class="rate">287 / 316</td>
-      <td class="rate">88 / 96</td>
-      <td class="rate">85 / 95</td>
-      <td class="rate">73 / 81</td>
-      <td class="rate">41 / 44</td>
-     </tr>
-     <tr>
-      <td class="number">No.07</td>
-      <td class="card">蝶符「真夏の羽ばたき」<br />(Hard)</td>
-      <td class="rate">161 / 191</td>
-      <td class="rate">23 / 27</td>
-      <td class="rate">69 / 82</td>
-      <td class="rate">18 / 28</td>
-      <td class="rate">51 / 54</td>
-     </tr>
-     <tr>
-      <td class="number">No.08</td>
-      <td class="card">蝶符「真夏の羽ばたき」<br />(Lunatic)</td>
-      <td class="rate">554 / 711</td>
-      <td class="rate">105 / 133</td>
-      <td class="rate">112 / 150</td>
-      <td class="rate">191 / 256</td>
-      <td class="rate">146 / 172</td>
-     </tr>
-     <tr>
-      <td class="number">No.09</td>
-      <td class="card">雨符「囚われの秋雨」<br />(Easy)</td>
-      <td class="rate">7 / 7</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.10</td>
-      <td class="card">雨符「囚われの秋雨」<br />(Normal)</td>
-      <td class="rate">122 / 196</td>
-      <td class="rate">47 / 64</td>
-      <td class="rate">29 / 58</td>
-      <td class="rate">24 / 44</td>
-      <td class="rate">22 / 30</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.11</td>
-      <td class="card">雨符「呪われた柴榑雨」<br />(Hard)</td>
-      <td class="rate">21 / 71</td>
-      <td class="rate">0 / 11</td>
-      <td class="rate">4 / 30</td>
-      <td class="rate">1 / 10</td>
-      <td class="rate">16 / 20</td>
-     </tr>
-     <tr>
-      <td class="number">No.12</td>
-      <td class="card">雨符「呪われた柴榑雨」<br />(Lunatic)</td>
-      <td class="rate">51 / 399</td>
-      <td class="rate">0 / 82</td>
-      <td class="rate">11 / 84</td>
-      <td class="rate">1 / 151</td>
-      <td class="rate">39 / 82</td>
-     </tr>
-     <tr>
-      <td class="number">No.13</td>
-      <td class="card">刃符「山姥の包丁研ぎ」<br />(Easy)</td>
-      <td class="rate">3 / 7</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.14</td>
-      <td class="card">刃符「山姥の包丁研ぎ」<br />(Normal)</td>
-      <td class="rate">83 / 163</td>
-      <td class="rate">29 / 50</td>
-      <td class="rate">19 / 49</td>
-      <td class="rate">19 / 35</td>
-      <td class="rate">16 / 29</td>
-     </tr>
-     <tr>
-      <td class="number">No.15</td>
-      <td class="card">刃符「山姥の鬼包丁研ぎ」<br />(Hard)</td>
-      <td class="rate">18 / 58</td>
-      <td class="rate">8 / 10</td>
-      <td class="rate">10 / 23</td>
-      <td class="rate">0 / 10</td>
-      <td class="rate">0 / 15</td>
-     </tr>
-     <tr>
-      <td class="number">No.16</td>
-      <td class="card">刃符「山姥の鬼包丁研ぎ」<br />(Lunatic)</td>
-      <td class="rate">69 / 371</td>
-      <td class="rate">40 / 79</td>
-      <td class="rate">5 / 82</td>
-      <td class="rate">14 / 138</td>
-      <td class="rate">10 / 72</td>
-     </tr>
-     <tr>
-      <td class="number">No.17</td>
-      <td class="card">尽符「マウンテンマーダー」<br />(Easy)</td>
-      <td class="rate">6 / 7</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.18</td>
-      <td class="card">尽符「マウンテンマーダー」<br />(Normal)</td>
-      <td class="rate">124 / 141</td>
-      <td class="rate">41 / 46</td>
-      <td class="rate">36 / 42</td>
-      <td class="rate">28 / 31</td>
-      <td class="rate">19 / 22</td>
-     </tr>
-     <tr>
-      <td class="number">No.19</td>
-      <td class="card">尽符「ブラッディマウンテンマーダー」<br />(Hard)</td>
-      <td class="rate">42 / 53</td>
-      <td class="rate">5 / 8</td>
-      <td class="rate">15 / 20</td>
-      <td class="rate">8 / 10</td>
-      <td class="rate">14 / 15</td>
-     </tr>
-     <tr>
-      <td class="number">No.20</td>
-      <td class="card">尽符「ブラッディマウンテンマーダー」<br />(Lunatic)</td>
-      <td class="rate">145 / 335</td>
-      <td class="rate">20 / 71</td>
-      <td class="rate">36 / 77</td>
-      <td class="rate">40 / 119</td>
-      <td class="rate">49 / 68</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.21</td>
-      <td class="card">春符「サプライズスプリング」<br />(Hard)</td>
-      <td class="rate">31 / 36</td>
-      <td class="rate">6 / 7</td>
-      <td class="rate">10 / 14</td>
-      <td class="rate">5 / 5</td>
-      <td class="rate">10 / 10</td>
-     </tr>
-     <tr>
-      <td class="number">No.22</td>
-      <td class="card">春符「サプライズスプリング」<br />(Lunatic)</td>
-      <td class="rate">227 / 256</td>
-      <td class="rate">48 / 50</td>
-      <td class="rate">59 / 64</td>
-      <td class="rate">75 / 96</td>
-      <td class="rate">45 / 46</td>
-     </tr>
-     <tr>
-      <td class="number">No.23</td>
-      <td class="card">犬符「野良犬の散歩」<br />(Easy)</td>
-      <td class="rate">7 / 7</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.24</td>
-      <td class="card">犬符「野良犬の散歩」<br />(Normal)</td>
-      <td class="rate">29 / 91</td>
-      <td class="rate">20 / 32</td>
-      <td class="rate">5 / 28</td>
-      <td class="rate">1 / 16</td>
-      <td class="rate">3 / 15</td>
-     </tr>
-     <tr>
-      <td class="number">No.25</td>
-      <td class="card">狗符「山狗の散歩」<br />(Hard)</td>
-      <td class="rate">7 / 28</td>
-      <td class="rate">2 / 4</td>
-      <td class="rate">2 / 11</td>
-      <td class="rate">1 / 5</td>
-      <td class="rate">2 / 8</td>
-     </tr>
-     <tr>
-      <td class="number">No.26</td>
-      <td class="card">狗符「山狗の散歩」<br />(Lunatic)</td>
-      <td class="rate">83 / 233</td>
-      <td class="rate">35 / 44</td>
-      <td class="rate">12 / 56</td>
-      <td class="rate">23 / 92</td>
-      <td class="rate">13 / 41</td>
-     </tr>
-     <tr>
-      <td class="number">No.27</td>
-      <td class="card">独楽「コマ犬回し」<br />(Easy)</td>
-      <td class="rate">2 / 7</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">1 / 3</td>
-      <td class="rate">1 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.28</td>
-      <td class="card">独楽「コマ犬回し」<br />(Normal)</td>
-      <td class="rate">51 / 83</td>
-      <td class="rate">16 / 31</td>
-      <td class="rate">18 / 26</td>
-      <td class="rate">7 / 13</td>
-      <td class="rate">10 / 13</td>
-     </tr>
-     <tr>
-      <td class="number">No.29</td>
-      <td class="card">独楽「コマ犬回し」<br />(Hard)</td>
-      <td class="rate">9 / 26</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">4 / 11</td>
-      <td class="rate">4 / 5</td>
-      <td class="rate">1 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.30</td>
-      <td class="card">独楽「カールアップアンドダイ」<br />(Lunatic)</td>
-      <td class="rate">124 / 225</td>
-      <td class="rate">23 / 43</td>
-      <td class="rate">25 / 56</td>
-      <td class="rate">42 / 85</td>
-      <td class="rate">34 / 41</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.31</td>
-      <td class="card">狗符「独り阿吽の呼吸」<br />(Easy)</td>
-      <td class="rate">3 / 6</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.32</td>
-      <td class="card">狗符「独り阿吽の呼吸」<br />(Normal)</td>
-      <td class="rate">41 / 77</td>
-      <td class="rate">11 / 26</td>
-      <td class="rate">13 / 26</td>
-      <td class="rate">9 / 13</td>
-      <td class="rate">8 / 12</td>
-     </tr>
-     <tr>
-      <td class="number">No.33</td>
-      <td class="card">狗符「独り阿吽の呼吸」<br />(Hard)</td>
-      <td class="rate">18 / 25</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">6 / 11</td>
-      <td class="rate">2 / 4</td>
-      <td class="rate">7 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.34</td>
-      <td class="card">狗符「独り阿吽の呼吸」<br />(Lunatic)</td>
-      <td class="rate">115 / 198</td>
-      <td class="rate">12 / 36</td>
-      <td class="rate">32 / 56</td>
-      <td class="rate">42 / 69</td>
-      <td class="rate">29 / 37</td>
-     </tr>
-     <tr>
-      <td class="number">No.35</td>
-      <td class="card">魔符「インスタントボーディ」<br />(Easy)</td>
-      <td class="rate">5 / 6</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.36</td>
-      <td class="card">魔符「インスタントボーディ」<br />(Normal)</td>
-      <td class="rate">44 / 62</td>
-      <td class="rate">12 / 17</td>
-      <td class="rate">14 / 22</td>
-      <td class="rate">8 / 13</td>
-      <td class="rate">10 / 10</td>
-     </tr>
-     <tr>
-      <td class="number">No.37</td>
-      <td class="card">魔符「即席菩提」<br />(Hard)</td>
-      <td class="rate">17 / 31</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">8 / 9</td>
-      <td class="rate">0 / 10</td>
-      <td class="rate">6 / 9</td>
-     </tr>
-     <tr>
-      <td class="number">No.38</td>
-      <td class="card">魔符「即席菩提」<br />(Lunatic)</td>
-      <td class="rate">115 / 176</td>
-      <td class="rate">20 / 27</td>
-      <td class="rate">39 / 71</td>
-      <td class="rate">33 / 49</td>
-      <td class="rate">23 / 29</td>
-     </tr>
-     <tr>
-      <td class="number">No.39</td>
-      <td class="card">魔符「バレットゴーレム」<br />(Easy)</td>
-      <td class="rate">0 / 6</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.40</td>
-      <td class="card">魔符「バレットゴーレム」<br />(Normal)</td>
-      <td class="rate">1 / 60</td>
-      <td class="rate">1 / 17</td>
-      <td class="rate">0 / 22</td>
-      <td class="rate">0 / 12</td>
-      <td class="rate">0 / 9</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.41</td>
-      <td class="card">魔符「ペットの巨大弾生命体」<br />(Hard)</td>
-      <td class="rate">0 / 29</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 9</td>
-      <td class="rate">0 / 10</td>
-      <td class="rate">0 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.42</td>
-      <td class="card">魔符「ペットの巨大弾生命体」<br />(Lunatic)</td>
-      <td class="rate">0 / 164</td>
-      <td class="rate">0 / 26</td>
-      <td class="rate">0 / 65</td>
-      <td class="rate">0 / 47</td>
-      <td class="rate">0 / 26</td>
-     </tr>
-     <tr>
-      <td class="number">No.43</td>
-      <td class="card">地蔵「クリミナルサルヴェイション」<br />(Easy)</td>
-      <td class="rate">0 / 4</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.44</td>
-      <td class="card">地蔵「クリミナルサルヴェイション」<br />(Normal)</td>
-      <td class="rate">29 / 60</td>
-      <td class="rate">5 / 17</td>
-      <td class="rate">12 / 22</td>
-      <td class="rate">7 / 12</td>
-      <td class="rate">5 / 9</td>
-     </tr>
-     <tr>
-      <td class="number">No.45</td>
-      <td class="card">地蔵「業火救済」<br />(Hard)</td>
-      <td class="rate">19 / 28</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">9 / 9</td>
-      <td class="rate">2 / 9</td>
-      <td class="rate">5 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.46</td>
-      <td class="card">地蔵「業火救済」<br />(Lunatic)</td>
-      <td class="rate">86 / 156</td>
-      <td class="rate">21 / 26</td>
-      <td class="rate">17 / 61</td>
-      <td class="rate">30 / 45</td>
-      <td class="rate">18 / 24</td>
-     </tr>
-     <tr>
-      <td class="number">No.47</td>
-      <td class="card">竹符「バンブースピアダンス」<br />(Easy)</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.48</td>
-      <td class="card">竹符「バンブースピアダンス」<br />(Normal)</td>
-      <td class="rate">14 / 47</td>
-      <td class="rate">3 / 12</td>
-      <td class="rate">7 / 18</td>
-      <td class="rate">3 / 10</td>
-      <td class="rate">1 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.49</td>
-      <td class="card">竹符「バンブークレイジーダンス」<br />(Hard)</td>
-      <td class="rate">12 / 21</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">8 / 13</td>
-      <td class="rate">2 / 2</td>
-      <td class="rate">2 / 5</td>
-     </tr>
-     <tr>
-      <td class="number">No.50</td>
-      <td class="card">竹符「バンブークレイジーダンス」<br />(Lunatic)</td>
-      <td class="rate">56 / 111</td>
-      <td class="rate">4 / 14</td>
-      <td class="rate">14 / 36</td>
-      <td class="rate">29 / 42</td>
-      <td class="rate">9 / 19</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.51</td>
-      <td class="card">茗荷「フォゲットユアネーム」<br />(Easy)</td>
-      <td class="rate">3 / 3</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">2 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.52</td>
-      <td class="card">茗荷「フォゲットユアネーム」<br />(Normal)</td>
-      <td class="rate">3 / 5</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.53</td>
-      <td class="card">茗荷「フォゲットユアネーム」<br />(Hard)</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.54</td>
-      <td class="card">茗荷「フォゲットユアネーム」<br />(Lunatic)</td>
-      <td class="rate">4 / 22</td>
-      <td class="rate">3 / 13</td>
-      <td class="rate">0 / 7</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.55</td>
-      <td class="card">笹符「タナバタスターフェスティバル」<br />(Easy)</td>
-      <td class="rate">2 / 2</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.56</td>
-      <td class="card">笹符「タナバタスターフェスティバル」<br />(Normal)</td>
-      <td class="rate">8 / 23</td>
-      <td class="rate">2 / 6</td>
-      <td class="rate">1 / 10</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">3 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.57</td>
-      <td class="card">笹符「タナバタスターフェスティバル」<br />(Hard)</td>
-      <td class="rate">8 / 17</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">7 / 12</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.58</td>
-      <td class="card">笹符「タナバタスターフェスティバル」<br />(Lunatic)</td>
-      <td class="rate">11 / 33</td>
-      <td class="rate">2 / 13</td>
-      <td class="rate">5 / 13</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">2 / 4</td>
-     </tr>
-     <tr>
-      <td class="number">No.59</td>
-      <td class="card">冥加「ビハインドユー」<br />(Easy)</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.60</td>
-      <td class="card">冥加「ビハインドユー」<br />(Normal)</td>
-      <td class="rate">10 / 28</td>
-      <td class="rate">3 / 7</td>
-      <td class="rate">4 / 10</td>
-      <td class="rate">1 / 7</td>
-      <td class="rate">2 / 4</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.61</td>
-      <td class="card">冥加「ビハインドユー」<br />(Hard)</td>
-      <td class="rate">2 / 6</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">1 / 3</td>
-      <td class="rate">1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.62</td>
-      <td class="card">冥加「ビハインドユー」<br />(Lunatic)</td>
-      <td class="rate">42 / 97</td>
-      <td class="rate">8 / 14</td>
-      <td class="rate">11 / 28</td>
-      <td class="rate">17 / 38</td>
-      <td class="rate">6 / 17</td>
-     </tr>
-     <tr>
-      <td class="number">No.63</td>
-      <td class="card">舞符「ビハインドフェスティバル」<br />(Easy)</td>
-      <td class="rate">1 / 4</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.64</td>
-      <td class="card">舞符「ビハインドフェスティバル」<br />(Normal)</td>
-      <td class="rate">5 / 51</td>
-      <td class="rate">1 / 13</td>
-      <td class="rate">2 / 20</td>
-      <td class="rate">2 / 10</td>
-      <td class="rate">0 / 8</td>
-     </tr>
-     <tr>
-      <td class="number">No.65</td>
-      <td class="card">舞符「ビハインドフェスティバル」<br />(Hard)</td>
-      <td class="rate">9 / 23</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">5 / 13</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">1 / 5</td>
-     </tr>
-     <tr>
-      <td class="number">No.66</td>
-      <td class="card">舞符「ビハインドフェスティバル」<br />(Lunatic)</td>
-      <td class="rate">16 / 125</td>
-      <td class="rate">1 / 26</td>
-      <td class="rate">9 / 39</td>
-      <td class="rate">5 / 40</td>
-      <td class="rate">1 / 20</td>
-     </tr>
-     <tr>
-      <td class="number">No.67</td>
-      <td class="card">狂舞「テングオドシ」<br />(Easy)</td>
-      <td class="rate">2 / 4</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">2 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.68</td>
-      <td class="card">狂舞「テングオドシ」<br />(Normal)</td>
-      <td class="rate">4 / 51</td>
-      <td class="rate">1 / 13</td>
-      <td class="rate">2 / 20</td>
-      <td class="rate">0 / 10</td>
-      <td class="rate">1 / 8</td>
-     </tr>
-     <tr>
-      <td class="number">No.69</td>
-      <td class="card">狂舞「狂乱天狗怖し」<br />(Hard)</td>
-      <td class="rate">0 / 23</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 13</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 5</td>
-     </tr>
-     <tr>
-      <td class="number">No.70</td>
-      <td class="card">狂舞「狂乱天狗怖し」<br />(Lunatic)</td>
-      <td class="rate">2 / 124</td>
-      <td class="rate">0 / 26</td>
-      <td class="rate">0 / 38</td>
-      <td class="rate">1 / 40</td>
-      <td class="rate">1 / 20</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.71</td>
-      <td class="card">後符「秘神の後光」<br />(Easy)</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">2 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.72</td>
-      <td class="card">後符「秘神の後光」<br />(Normal)</td>
-      <td class="rate">10 / 56</td>
-      <td class="rate">0 / 13</td>
-      <td class="rate">4 / 26</td>
-      <td class="rate">4 / 9</td>
-      <td class="rate">2 / 8</td>
-     </tr>
-     <tr>
-      <td class="number">No.73</td>
-      <td class="card">後符「秘神の後光」<br />(Hard)</td>
-      <td class="rate">0 / 13</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 8</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.74</td>
-      <td class="card">後符「絶対秘神の後光」<br />(Lunatic)</td>
-      <td class="rate">21 / 139</td>
-      <td class="rate">5 / 24</td>
-      <td class="rate">4 / 43</td>
-      <td class="rate">10 / 54</td>
-      <td class="rate">2 / 18</td>
-     </tr>
-     <tr>
-      <td class="number">No.75</td>
-      <td class="card">裏夏「スコーチ・バイ・ホットサマー」<br />(Easy)</td>
-      <td class="rate">2 / 3</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">2 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.76</td>
-      <td class="card">裏夏「スコーチ・バイ・ホットサマー」<br />(Normal)</td>
-      <td class="rate">31 / 54</td>
-      <td class="rate">6 / 12</td>
-      <td class="rate">13 / 26</td>
-      <td class="rate">6 / 8</td>
-      <td class="rate">6 / 8</td>
-     </tr>
-     <tr>
-      <td class="number">No.77</td>
-      <td class="card">裏夏「異常猛暑の焦土」<br />(Hard)</td>
-      <td class="rate">7 / 13</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">6 / 8</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.78</td>
-      <td class="card">裏夏「異常猛暑の焦土」<br />(Lunatic)</td>
-      <td class="rate">72 / 127</td>
-      <td class="rate">17 / 24</td>
-      <td class="rate">25 / 39</td>
-      <td class="rate">22 / 49</td>
-      <td class="rate">8 / 15</td>
-     </tr>
-     <tr>
-      <td class="number">No.79</td>
-      <td class="card">裏秋「ダイ・オブ・ファミン」<br />(Easy)</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.80</td>
-      <td class="card">裏秋「ダイ・オブ・ファミン」<br />(Normal)</td>
-      <td class="rate">5 / 53</td>
-      <td class="rate">1 / 12</td>
-      <td class="rate">1 / 26</td>
-      <td class="rate">1 / 7</td>
-      <td class="rate">2 / 8</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.81</td>
-      <td class="card">裏秋「異常枯死の餓鬼」<br />(Hard)</td>
-      <td class="rate">5 / 13</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">5 / 8</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.82</td>
-      <td class="card">裏秋「異常枯死の餓鬼」<br />(Lunatic)</td>
-      <td class="rate">19 / 117</td>
-      <td class="rate">2 / 24</td>
-      <td class="rate">7 / 34</td>
-      <td class="rate">6 / 45</td>
-      <td class="rate">4 / 14</td>
-     </tr>
-     <tr>
-      <td class="number">No.83</td>
-      <td class="card">裏冬「ブラックスノーマン」<br />(Easy)</td>
-      <td class="rate">1 / 3</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.84</td>
-      <td class="card">裏冬「ブラックスノーマン」<br />(Normal)</td>
-      <td class="rate">3 / 53</td>
-      <td class="rate">1 / 12</td>
-      <td class="rate">1 / 26</td>
-      <td class="rate">0 / 7</td>
-      <td class="rate">1 / 8</td>
-     </tr>
-     <tr>
-      <td class="number">No.85</td>
-      <td class="card">裏冬「異常降雪の雪だるま」<br />(Hard)</td>
-      <td class="rate">1 / 13</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">1 / 8</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.86</td>
-      <td class="card">裏冬「異常降雪の雪だるま」<br />(Lunatic)</td>
-      <td class="rate">6 / 111</td>
-      <td class="rate">1 / 22</td>
-      <td class="rate">2 / 34</td>
-      <td class="rate">2 / 41</td>
-      <td class="rate">1 / 14</td>
-     </tr>
-     <tr>
-      <td class="number">No.87</td>
-      <td class="card">裏春「エイプリルウィザード」<br />(Easy)</td>
-      <td class="rate">1 / 3</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">1 / 2</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.88</td>
-      <td class="card">裏春「エイプリルウィザード」<br />(Normal)</td>
-      <td class="rate">22 / 49</td>
-      <td class="rate">3 / 10</td>
-      <td class="rate">11 / 25</td>
-      <td class="rate">5 / 7</td>
-      <td class="rate">3 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.89</td>
-      <td class="card">裏春「異常落花の魔術使い」<br />(Hard)</td>
-      <td class="rate">10 / 12</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">7 / 8</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.90</td>
-      <td class="card">裏春「異常落花の魔術使い」<br />(Lunatic)</td>
-      <td class="rate">67 / 100</td>
-      <td class="rate">14 / 21</td>
-      <td class="rate">18 / 29</td>
-      <td class="rate">23 / 36</td>
-      <td class="rate">12 / 14</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.91</td>
-      <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Easy)</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.92</td>
-      <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Normal)</td>
-      <td class="rate">0 / 6</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.93</td>
-      <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Hard)</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.94</td>
-      <td class="card">「裏・ブリージーチェリーブロッサム」<br />(Lunatic)</td>
-      <td class="rate">0 / 23</td>
-      <td class="rate">0 / 11</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 8</td>
-      <td class="rate">0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.95</td>
-      <td class="card">「裏・パーフェクトサマーアイス」<br />(Easy)</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.96</td>
-      <td class="card">「裏・パーフェクトサマーアイス」<br />(Normal)</td>
-      <td class="rate">0 / 9</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.97</td>
-      <td class="card">「裏・パーフェクトサマーアイス」<br />(Hard)</td>
-      <td class="rate">0 / 5</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 4</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.98</td>
-      <td class="card">「裏・パーフェクトサマーアイス」<br />(Lunatic)</td>
-      <td class="rate">0 / 8</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.99</td>
-      <td class="card">「裏・クレイジーフォールウィンド」<br />(Easy)</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.100</td>
-      <td class="card">「裏・クレイジーフォールウィンド」<br />(Normal)</td>
-      <td class="rate">0 / 13</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 8</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.101</td>
-      <td class="card">「裏・クレイジーフォールウィンド」<br />(Hard)</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.102</td>
-      <td class="card">「裏・クレイジーフォールウィンド」<br />(Lunatic)</td>
-      <td class="rate">0 / 15</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 8</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.103</td>
-      <td class="card">「裏・エクストリームウィンター」<br />(Easy)</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">0 / 0</td>
-     </tr>
-     <tr>
-      <td class="number">No.104</td>
-      <td class="card">「裏・エクストリームウィンター」<br />(Normal)</td>
-      <td class="rate">0 / 21</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 13</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.105</td>
-      <td class="card">「裏・エクストリームウィンター」<br />(Hard)</td>
-      <td class="rate">0 / 7</td>
-      <td class="rate">0 / 0</td>
-      <td class="rate">0 / 4</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.106</td>
-      <td class="card">「裏・エクストリームウィンター」<br />(Lunatic)</td>
-      <td class="rate">0 / 46</td>
-      <td class="rate">0 / 4</td>
-      <td class="rate">0 / 10</td>
-      <td class="rate">0 / 22</td>
-      <td class="rate">0 / 10</td>
-     </tr>
-     <tr>
-      <td class="number">No.107</td>
-      <td class="card">鼓舞「パワフルチアーズ」<br />(Extra)</td>
-      <td class="rate">91 / 184</td>
-      <td class="rate">38 / 93</td>
-      <td class="rate">35 / 64</td>
-      <td class="rate">10 / 18</td>
-      <td class="rate">8 / 9</td>
-     </tr>
-     <tr>
-      <td class="number">No.108</td>
-      <td class="card">狂舞「クレイジーバックダンス」<br />(Extra)</td>
-      <td class="rate">109 / 140</td>
-      <td class="rate">68 / 74</td>
-      <td class="rate">27 / 48</td>
-      <td class="rate">7 / 10</td>
-      <td class="rate">7 / 8</td>
-     </tr>
-     <tr>
-      <td class="number">No.109</td>
-      <td class="card">弾舞「二つ目の台風」<br />(Extra)</td>
-      <td class="rate">0 / 124</td>
-      <td class="rate">0 / 73</td>
-      <td class="rate">0 / 37</td>
-      <td class="rate">0 / 7</td>
-      <td class="rate">0 / 7</td>
-     </tr>
-     <tr>
-      <td class="number">No.110</td>
-      <td class="card">秘儀「リバースインヴォーカー」<br />(Extra)</td>
-      <td class="rate">4 / 55</td>
-      <td class="rate">4 / 31</td>
-      <td class="rate">0 / 17</td>
-      <td class="rate">0 / 4</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-
-     <tr>
-      <td class="number">No.111</td>
-      <td class="card">秘儀「裏切りの後方射撃」<br />(Extra)</td>
-      <td class="rate">2 / 40</td>
-      <td class="rate">2 / 20</td>
-      <td class="rate">0 / 13</td>
-      <td class="rate">0 / 4</td>
-      <td class="rate">0 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.112</td>
-      <td class="card">秘儀「弾幕の玉繭」<br />(Extra)</td>
-      <td class="rate">11 / 34</td>
-      <td class="rate">5 / 16</td>
-      <td class="rate">4 / 11</td>
-      <td class="rate">1 / 4</td>
-      <td class="rate">1 / 3</td>
-     </tr>
-     <tr>
-      <td class="number">No.113</td>
-      <td class="card">秘儀「穢那の火」<br />(Extra)</td>
-      <td class="rate">0 / 25</td>
-      <td class="rate">0 / 12</td>
-      <td class="rate">0 / 9</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.114</td>
-      <td class="card">秘儀「後戸の狂言」<br />(Extra)</td>
-      <td class="rate">0 / 19</td>
-      <td class="rate">0 / 10</td>
-      <td class="rate">0 / 6</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.115</td>
-      <td class="card">秘儀「マターラドゥッカ」<br />(Extra)</td>
-      <td class="rate">7 / 16</td>
-      <td class="rate">2 / 8</td>
-      <td class="rate">3 / 5</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">1 / 2</td>
-     </tr>
-     <tr>
-      <td class="number">No.116</td>
-      <td class="card">秘儀「七星の剣」<br />(Extra)</td>
-      <td class="rate">0 / 14</td>
-      <td class="rate">0 / 7</td>
-      <td class="rate">0 / 5</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.117</td>
-      <td class="card">秘儀「無縁の芸能者」<br />(Extra)</td>
-      <td class="rate">0 / 12</td>
-      <td class="rate">0 / 6</td>
-      <td class="rate">0 / 4</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.118</td>
-      <td class="card">「背面の暗黒猿楽」<br />(Extra)</td>
-      <td class="rate">4 / 10</td>
-      <td class="rate">1 / 5</td>
-      <td class="rate">1 / 3</td>
-      <td class="rate">1 / 1</td>
-      <td class="rate">1 / 1</td>
-     </tr>
-     <tr>
-      <td class="number">No.119</td>
-      <td class="card">「アナーキーバレットヘル」<br />(Extra)</td>
-      <td class="rate">0 / 7</td>
-      <td class="rate">0 / 2</td>
-      <td class="rate">0 / 3</td>
-      <td class="rate">0 / 1</td>
-      <td class="rate">0 / 1</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="rate_per_level">
-    <caption id="rate_per_level">難易度別スペルカード蒐集率（取得回数 / 挑戦回数 / 総数）</caption>
-    <thead>
-     <tr>
-      <td class="level">難易度</td>
-      <td class="character">全主人公合計</td>
-      <td class="character">博麗 霊夢</td>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="character">射命丸 文</td>
-      <td class="character">霧雨 魔理沙</td>
-     </tr>
-    </thead>
-    <tfoot>
-     <tr>
-      <td>Total</td>
-      <td class="rate">89 / 115 / 119</td>
-      <td class="rate">71 / 110 / 119</td>
-      <td class="rate">76 / 105 / 119</td>
-      <td class="rate">70 / 108 / 119</td>
-      <td class="rate">61 / 89 / 119</td>
-     </tr>
-    </tfoot>
-    <tbody>
-     <tr>
-      <td class="level">Easy</td>
-      <td class="rate">18 / 24 / 26</td>
-      <td class="rate">9 / 21 / 26</td>
-      <td class="rate">12 / 15 / 26</td>
-      <td class="rate">13 / 21 / 26</td>
-      <td class="rate">0 / 0 / 26</td>
-     </tr>
-     <tr>
-      <td class="level">Normal</td>
-      <td class="rate">22 / 26 / 26</td>
-      <td class="rate">21 / 26 / 26</td>
-      <td class="rate">21 / 26 / 26</td>
-      <td class="rate">18 / 25 / 26</td>
-      <td class="rate">20 / 26 / 26</td>
-     </tr>
-     <tr>
-      <td class="level">Hard</td>
-      <td class="rate">20 / 25 / 27</td>
-      <td class="rate">14 / 23 / 27</td>
-      <td class="rate">18 / 24 / 27</td>
-      <td class="rate">13 / 23 / 27</td>
-      <td class="rate">14 / 23 / 27</td>
-     </tr>
-     <tr>
-      <td class="level">Lunatic</td>
-      <td class="rate">22 / 27 / 27</td>
-      <td class="rate">20 / 27 / 27</td>
-      <td class="rate">20 / 27 / 27</td>
-      <td class="rate">21 / 26 / 27</td>
-      <td class="rate">22 / 27 / 27</td>
-     </tr>
-     <tr>
-      <td class="level">Extra</td>
-      <td class="rate">7 / 13 / 13</td>
-      <td class="rate">7 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-     </tr>
-    </tbody>
-   </table>
-
-   <table class="rate_per_stage">
-    <caption id="rate_per_stage">ステージ別スペルカード蒐集率（取得回数 / 挑戦回数 / 総数）</caption>
-    <thead>
-     <tr>
-      <td class="stage">ステージ</td>
-      <td class="character">全主人公合計</td>
-      <td class="character">博麗 霊夢</td>
-      <td class="character">日焼けしたチルノ</td>
-      <td class="character">射命丸 文</td>
-      <td class="character">霧雨 魔理沙</td>
-     </tr>
-    </thead>
-    <tfoot>
-     <tr>
-      <td>Total</td>
-      <td class="rate">89 / 115 / 119</td>
-      <td class="rate">71 / 110 / 119</td>
-      <td class="rate">76 / 105 / 119</td>
-      <td class="rate">70 / 108 / 119</td>
-      <td class="rate">61 / 89 / 119</td>
-     </tr>
-    </tfoot>
-    <tbody>
-     <tr>
-      <td class="stage">Stage1</td>
-      <td class="rate">8 / 8 / 8</td>
-      <td class="rate">8 / 8 / 8</td>
-      <td class="rate">8 / 8 / 8</td>
-      <td class="rate">7 / 8 / 8</td>
-      <td class="rate">6 / 6 / 8</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage2</td>
-      <td class="rate">12 / 12 / 12</td>
-      <td class="rate">10 / 12 / 12</td>
-      <td class="rate">12 / 12 / 12</td>
-      <td class="rate">10 / 12 / 12</td>
-      <td class="rate">8 / 9 / 12</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage3</td>
-      <td class="rate">14 / 14 / 14</td>
-      <td class="rate">11 / 14 / 14</td>
-      <td class="rate">14 / 14 / 14</td>
-      <td class="rate">14 / 14 / 14</td>
-      <td class="rate">11 / 11 / 14</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage4</td>
-      <td class="rate">8 / 12 / 12</td>
-      <td class="rate">8 / 12 / 12</td>
-      <td class="rate">7 / 12 / 12</td>
-      <td class="rate">6 / 12 / 12</td>
-      <td class="rate">6 / 9 / 12</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage5</td>
-      <td class="rate">21 / 24 / 24</td>
-      <td class="rate">15 / 21 / 24</td>
-      <td class="rate">16 / 21 / 24</td>
-      <td class="rate">14 / 19 / 24</td>
-      <td class="rate">14 / 17 / 24</td>
-     </tr>
-     <tr>
-      <td class="stage">Stage6</td>
-      <td class="rate">19 / 32 / 36</td>
-      <td class="rate">12 / 30 / 36</td>
-      <td class="rate">14 / 25 / 36</td>
-      <td class="rate">14 / 30 / 36</td>
-      <td class="rate">11 / 24 / 36</td>
-     </tr>
-     <tr>
-      <td class="stage">Extra</td>
-      <td class="rate">7 / 13 / 13</td>
-      <td class="rate">7 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-      <td class="rate">5 / 13 / 13</td>
-     </tr>
-    </tbody>
-   </table>
-
-  </div>
-
-  <hr />
-
-  <div class="section">
-   <p>
-    Data output by <a href="http://www.colorless-sight.jp/touhou/ThSFC/">ThScoreFileConverter</a>.
-<script type="text/javascript">
-<!--
+    Data output by <a href="https://www.colorless-sight.jp/thsfc/">ThScoreFileConverter</a>.
+<script>
+// <![CDATA[
     document.write("Last updated: ", document.lastModified, ".");
-//-->
+// ]]>
 </script>
    </p>
-  </div>
+  </footer>
 
  </body>
 </html>
